@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.57252336, g: 1.0211759, b: 1.6189613, a: 1}
+  m_IndirectSpecularColor: {r: 0.5757886, g: 1.0271802, b: 1.6266985, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12827,6 +12827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375a17fd9b19535468f5808234bc8767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mech: {fileID: 0}
   Movement: {fileID: 1254687718}
   MouseLook: {fileID: 1254687719}
   MechLook: {fileID: 0}
@@ -12881,6 +12882,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SensitivityX: 8
   SensitivityY: 8
+  DefaultFOV: 60
+  LockFOV: 50
   LookCam: {fileID: 1522365488}
   CamSwivel: {fileID: 1687886428}
   IsLocked: 1
@@ -12899,6 +12902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SensitivityX: 8
   SensitivityY: 8
+  SwivelSpeed: 8
   LookCam: {fileID: 939363127}
   MechAgent: {fileID: 442305631}
   IsLocked: 0
