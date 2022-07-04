@@ -27,14 +27,16 @@ public class Scr_MechMovement : MonoBehaviour
     private void Update() 
     { 
         IsGrounded = Physics.CheckSphere(MechAgent.position,0.5f,GroundMask);
+
         if (IsGrounded)
         {
             verticalVelcoity.y = 0;
         }
-        if (ToJump)
-        {
-            OnJump();
-        }
+        
+        // if (ToJump)
+        // {
+        //     OnJump();
+        // }
 
         Vector3 horizontalVelocity = (MechAgent.right * horizontalInput.x + MechAgent.forward * horizontalInput.y).normalized * speed;
         CurrentMoveVec = Vector3.Lerp(CurrentMoveVec,horizontalVelocity,Time.deltaTime * 5);
@@ -46,15 +48,20 @@ public class Scr_MechMovement : MonoBehaviour
 
     public void Jump()
     {
-        if (IsGrounded)
-        {
-            ToJump = true;
-        }
+        // if (IsGrounded)
+        // {
+        //     ToJump = true;
+        // }
     }
 
-    void OnJump()
+    // void OnJump()
+    // {
+    //     verticalVelcoity.y = Mathf.Sqrt(-2f * JumpHeight * Gravity);
+    //     ToJump = false;
+    // }
+
+    public Vector2 GetHorizontalInput()
     {
-        verticalVelcoity.y = Mathf.Sqrt(-2f * JumpHeight * Gravity);
-        ToJump = false;
+        return horizontalInput;
     }
 }
