@@ -7,7 +7,11 @@ public class Scr_MouseLook : MonoBehaviour
     [SerializeField] float SensitivityX = 8;
     [SerializeField] float SensitivityY = 8;
 
-    [SerializeField] Transform LookCam;
+    [SerializeField] float DefaultFOV = 60;
+    [SerializeField] float LockFOV = 50;
+    float CurrentFof;
+
+    [SerializeField] Camera LookCam;
     [SerializeField] Transform CamSwivel;
 
     public bool IsLocked;
@@ -23,6 +27,8 @@ public class Scr_MouseLook : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         //to hide the curser
         Cursor.visible = false;
+
+        CurrentFof = DefaultFOV;
     }
 
     // Update is called once per frame
@@ -35,6 +41,8 @@ public class Scr_MouseLook : MonoBehaviour
 
             LookRotation.x = Mathf.Clamp(LookRotation.x, -LookClamp.x,LookClamp.x);
             LookRotation.y = Mathf.Clamp(LookRotation.y, -LookClamp.y,LookClamp.y);
+
+            CurrentFof = Mathf.Lerp(CurrentFof, LockFOV, Time.deltaTime * 5);
         }
         else
         {
@@ -43,6 +51,8 @@ public class Scr_MouseLook : MonoBehaviour
 
             LookRotation.x = Mathf.Clamp(LookRotation.x, -LookClamp.x,LookClamp.x);
             LookRotation.y = Mathf.Clamp(LookRotation.y, -LookClamp.y,LookClamp.y);
+
+            CurrentFof = Mathf.Lerp(CurrentFof, DefaultFOV, Time.deltaTime * 5);
         }
 
         if (IsLocked)
@@ -51,8 +61,10 @@ public class Scr_MouseLook : MonoBehaviour
             LookRotation.y = Mathf.Lerp(LookRotation.y, 0, Time.deltaTime * 5);
         }
 
-        CamSwivel.localRotation= Quaternion.Euler(0,LookRotation.x,0);
-        LookCam.localRotation= Quaternion.Euler(LookRotation.y,0,0);
+        LookCam.fieldOfView = CurrentFof;
+
+        CamSwivel.localRotation = Quaternion.Euler(0,LookRotation.x,0);
+        LookCam.transform.localRotation = Quaternion.Euler(LookRotation.y,0,0);
     }
 
     public void RecieveInput(Vector2 _mouseInput)
