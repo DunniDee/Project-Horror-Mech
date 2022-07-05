@@ -28,6 +28,7 @@ Vector2 mechRotation;
         groundMevment.MouseX.performed += ctx => mouseInput.x = ctx.ReadValue<float>();
         groundMevment.MouseY.performed += ctx => mouseInput.y = ctx.ReadValue<float>();
 
+        groundMevment.MouseClick.performed += _ => MouseLook.Click();
         groundMevment.Dash.performed += _ => Movement.Dash();
         groundMevment.Lock.performed += _ => Mech.ToggleLock();
 
