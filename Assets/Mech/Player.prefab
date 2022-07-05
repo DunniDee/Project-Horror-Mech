@@ -2980,7 +2980,6 @@ MonoBehaviour:
   AS: {fileID: 832252050}
   StepSound: {fileID: 8300000, guid: 8c9da0f7e9e9e1c4ab78dfec8f1f9d5e, type: 3}
   CamAnim: {fileID: 1369023906}
-  ShakeAnim: {fileID: 8479862872998876549, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
   PilotAnim: {fileID: 272428304765205390}
 --- !u!1 &3744990167552815950
 GameObject:
