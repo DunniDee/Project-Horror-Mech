@@ -16,6 +16,7 @@ public class Scr_MechLook : MonoBehaviour
     Vector2 MouseInput;
     [SerializeField] Vector2 LookClamp;
     Vector2 LookRotation;
+    Vector2 MechRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,12 @@ public class Scr_MechLook : MonoBehaviour
         if (!IsLocked)
         {
             LookRotation.x += MouseInput.x * Time.deltaTime;
+
+            if (LookRotation.x != 0)
+            {
+                MechRotation.y = Mathf.Lerp(MechRotation.y, SwivelSpeed * MechRotation.x, Time.deltaTime * 10);
+            }
+            LookRotation.x += MechRotation.y * Time.deltaTime;
             LookRotation.y -= MouseInput.y * Time.deltaTime;
 
 
@@ -48,10 +55,13 @@ public class Scr_MechLook : MonoBehaviour
         LookCam.localRotation= Quaternion.Euler(LookRotation.y,0,0);
     }
 
-    public void RecieveInput(Vector2 _mouseInput)
+    public void RecieveInput(Vector2 _mouseInput, Vector2 mechRotation)
     {
         MouseInput.x = _mouseInput.x;
         MouseInput.y = _mouseInput.y;
+
+        MechRotation.x = mechRotation.x;
+        Debug.Log(MechRotation);
     }
 
     public Vector2 GetInput()

@@ -16,19 +16,21 @@ MechControlls.GroundMevmentActions groundMevment;
 
 Vector2 horizontalInput;
 Vector2 mouseInput;
+Vector2 mechRotation;
     private void Awake() 
     {
         controlls = new MechControlls();
         groundMevment = controlls.GroundMevment;
 
         groundMevment.HorizontalMovement.performed += ctx => horizontalInput = ctx.ReadValue<Vector2>();
+        groundMevment.Rotation.performed += ctx => mechRotation = ctx.ReadValue<Vector2>();
 
         groundMevment.MouseX.performed += ctx => mouseInput.x = ctx.ReadValue<float>();
         groundMevment.MouseY.performed += ctx => mouseInput.y = ctx.ReadValue<float>();
 
-        groundMevment.Jump.performed += _ => Movement.Jump();
-        //groundMevment.Dash.performed += _ => Movement.Dash();
+        groundMevment.Dash.performed += _ => Movement.Dash();
         groundMevment.Lock.performed += _ => Mech.ToggleLock();
+
     }
 
     private void OnEnable() 
@@ -52,6 +54,7 @@ Vector2 mouseInput;
     {
         Movement.RecieveInput(horizontalInput);
         MouseLook.RecieveInput(mouseInput);
-        MechLook.RecieveInput(mouseInput);
+        MechLook.RecieveInput(mouseInput, mechRotation);
+
     }
 }

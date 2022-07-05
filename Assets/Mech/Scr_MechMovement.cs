@@ -13,8 +13,9 @@ public class Scr_MechMovement : MonoBehaviour
     [SerializeField] LayerMask GroundMask;
     Vector3 verticalVelcoity;
 
-    bool ToJump;
     public bool IsGrounded;
+    
+    bool ToDash;
 
 
     Vector2 horizontalInput;
@@ -32,11 +33,6 @@ public class Scr_MechMovement : MonoBehaviour
         {
             verticalVelcoity.y = 0;
         }
-        
-        // if (ToJump)
-        // {
-        //     OnJump();
-        // }
 
         Vector3 horizontalVelocity = (MechAgent.right * horizontalInput.x + MechAgent.forward * horizontalInput.y).normalized * speed;
         CurrentMoveVec = Vector3.Lerp(CurrentMoveVec,horizontalVelocity,Time.deltaTime * 5);
@@ -46,19 +42,10 @@ public class Scr_MechMovement : MonoBehaviour
         controller.Move(verticalVelcoity * Time.deltaTime);
     }
 
-    public void Jump()
+    public void Dash()
     {
-        // if (IsGrounded)
-        // {
-        //     ToJump = true;
-        // }
-    }
 
-    // void OnJump()
-    // {
-    //     verticalVelcoity.y = Mathf.Sqrt(-2f * JumpHeight * Gravity);
-    //     ToJump = false;
-    // }
+    }
 
     public Vector2 GetHorizontalInput()
     {

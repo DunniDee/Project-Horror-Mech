@@ -14,6 +14,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Rotation",
+                    "type": "PassThrough",
+                    "id": "041414f2-795a-464c-a0b1-bfe7fc2b823e",
+                    "expectedControlType": "Double",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "132dd503-92ab-4f8c-804b-c2a074aca5ac",
@@ -164,6 +172,39 @@
                     "action": "Lock",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "QE",
+                    "id": "4086a810-6067-4488-867a-4f85db843c38",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "a4b33302-3cc4-4c46-ae7d-8bb2c4049f04",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "bf76cbbb-dca1-4b7b-9ac8-dd8278f17dac",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

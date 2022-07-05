@@ -2111,7 +2111,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5678529302098561243}
-  - component: {fileID: 8479862872998876549}
   m_Layer: 0
   m_Name: CamShaker
   m_TagString: Untagged
@@ -2127,32 +2126,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2157357961626501360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3744990167244502055}
   m_Father: {fileID: 3744990167552815951}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8479862872998876549
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2157357961626501360}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e0dbb33960e9d7f4085c1ce43ede8f8a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3744990166762249384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,7 +2160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3744990166762249384}
   m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 4, z: 1}
+  m_LocalPosition: {x: 0, y: 7.54, z: -1.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3744990167552815951}
@@ -2778,7 +2758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3744990167244502054}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1965783535}
@@ -2998,9 +2978,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movment: {fileID: 3744990168365726966}
   AS: {fileID: 832252050}
-  StepSound: {fileID: 8300000, guid: d8767344c214a7f40b589509a5debb7e, type: 3}
+  StepSound: {fileID: 8300000, guid: 8c9da0f7e9e9e1c4ab78dfec8f1f9d5e, type: 3}
   CamAnim: {fileID: 1369023906}
-  ShakeAnim: {fileID: 8479862872998876549}
+  ShakeAnim: {fileID: 8479862872998876549, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
   PilotAnim: {fileID: 272428304765205390}
 --- !u!1 &3744990167552815950
 GameObject:
@@ -4284,6 +4264,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MouseLook: {fileID: 3744990168365726967}
   MechLook: {fileID: 3744990168365726968}
+  MechAgent: {fileID: 3744990167552815951}
+  IsColldingWall: 0
 --- !u!114 &3744990168365726966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5503,7 +5485,6 @@ GameObject:
   - component: {fileID: 3744990168632822591}
   - component: {fileID: 3744990168632822590}
   - component: {fileID: 3744990168632822589}
-  - component: {fileID: 660073690}
   m_Layer: 0
   m_Name: Aura Camera
   m_TagString: Untagged
@@ -5697,14 +5678,6 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
---- !u!81 &660073690
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3744990168632822588}
-  m_Enabled: 1
 --- !u!1 &3744990168660560142
 GameObject:
   m_ObjectHideFlags: 0
