@@ -61,7 +61,6 @@ public class Scr_MechLook : MonoBehaviour
         MouseInput.y = _mouseInput.y;
 
         MechRotation.x = mechRotation.x;
-        Debug.Log(MechRotation);
     }
 
     public Vector2 GetInput()
