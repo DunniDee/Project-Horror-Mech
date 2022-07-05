@@ -53,4 +53,16 @@ public class Scr_MechLook : MonoBehaviour
         MouseInput.x = _mouseInput.x;
         MouseInput.y = _mouseInput.y;
     }
+
+    public Vector2 GetInput()
+    {
+        if (!IsLocked)
+        {
+            return MouseInput;
+        }
+        else
+        {
+            return Vector2.zero;
+        }
+    }
 }
