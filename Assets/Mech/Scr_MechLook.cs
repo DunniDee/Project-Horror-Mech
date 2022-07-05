@@ -35,15 +35,15 @@ public class Scr_MechLook : MonoBehaviour
             MouseInput = MouseInput.normalized * SwivelSpeed;
         }
 
+        if (LookRotation.x != 0)
+        {
+            MechRotation.y = Mathf.Lerp(MechRotation.y, SwivelSpeed * MechRotation.x, Time.deltaTime * 10);
+        }
+        LookRotation.x += MechRotation.y * Time.deltaTime;
+
         if (!IsLocked)
         {
             LookRotation.x += MouseInput.x * Time.deltaTime;
-
-            if (LookRotation.x != 0)
-            {
-                MechRotation.y = Mathf.Lerp(MechRotation.y, SwivelSpeed * MechRotation.x, Time.deltaTime * 10);
-            }
-            LookRotation.x += MechRotation.y * Time.deltaTime;
             LookRotation.y -= MouseInput.y * Time.deltaTime;
 
 

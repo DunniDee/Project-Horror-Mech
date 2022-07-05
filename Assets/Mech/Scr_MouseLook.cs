@@ -72,4 +72,9 @@ public class Scr_MouseLook : MonoBehaviour
         MouseInput.x = _mouseInput.x;
         MouseInput.y = _mouseInput.y;
     }
+
+    public void Click()
+    {
+        Debug.Log("Click");
+    }
 }

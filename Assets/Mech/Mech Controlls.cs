@@ -73,6 +73,14 @@ public class @MechControlls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""MouseClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d776dc1-b909-49d3-be1d-820dc786a617"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -218,6 +226,17 @@ public class @MechControlls : IInputActionCollection, IDisposable
                     ""action"": ""Rotation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3285cb4d-22a3-48f8-8219-d8a8243ed5b2"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -233,6 +252,7 @@ public class @MechControlls : IInputActionCollection, IDisposable
         m_GroundMevment_MouseY = m_GroundMevment.FindAction("MouseY", throwIfNotFound: true);
         m_GroundMevment_Dash = m_GroundMevment.FindAction("Dash", throwIfNotFound: true);
         m_GroundMevment_Lock = m_GroundMevment.FindAction("Lock", throwIfNotFound: true);
+        m_GroundMevment_MouseClick = m_GroundMevment.FindAction("MouseClick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -289,6 +309,7 @@ public class @MechControlls : IInputActionCollection, IDisposable
     private readonly InputAction m_GroundMevment_MouseY;
     private readonly InputAction m_GroundMevment_Dash;
     private readonly InputAction m_GroundMevment_Lock;
+    private readonly InputAction m_GroundMevment_MouseClick;
     public struct GroundMevmentActions
     {
         private @MechControlls m_Wrapper;
@@ -300,6 +321,7 @@ public class @MechControlls : IInputActionCollection, IDisposable
         public InputAction @MouseY => m_Wrapper.m_GroundMevment_MouseY;
         public InputAction @Dash => m_Wrapper.m_GroundMevment_Dash;
         public InputAction @Lock => m_Wrapper.m_GroundMevment_Lock;
+        public InputAction @MouseClick => m_Wrapper.m_GroundMevment_MouseClick;
         public InputActionMap Get() { return m_Wrapper.m_GroundMevment; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -330,6 +352,9 @@ public class @MechControlls : IInputActionCollection, IDisposable
                 @Lock.started -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnLock;
                 @Lock.performed -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnLock;
                 @Lock.canceled -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnLock;
+                @MouseClick.started -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnMouseClick;
+                @MouseClick.performed -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnMouseClick;
+                @MouseClick.canceled -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnMouseClick;
             }
             m_Wrapper.m_GroundMevmentActionsCallbackInterface = instance;
             if (instance != null)
@@ -355,6 +380,9 @@ public class @MechControlls : IInputActionCollection, IDisposable
                 @Lock.started += instance.OnLock;
                 @Lock.performed += instance.OnLock;
                 @Lock.canceled += instance.OnLock;
+                @MouseClick.started += instance.OnMouseClick;
+                @MouseClick.performed += instance.OnMouseClick;
+                @MouseClick.canceled += instance.OnMouseClick;
             }
         }
     }
@@ -368,5 +396,6 @@ public class @MechControlls : IInputActionCollection, IDisposable
         void OnMouseY(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnLock(InputAction.CallbackContext context);
+        void OnMouseClick(InputAction.CallbackContext context);
     }
 }
