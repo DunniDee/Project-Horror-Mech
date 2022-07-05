@@ -8,7 +8,7 @@ public class Scr_MechFootSteps : MonoBehaviour
     [SerializeField] AudioSource AS;
     [SerializeField] AudioClip StepSound;
     [SerializeField] Animator CamAnim;
-    [SerializeField] Animator ShakeAnim;
+    //[SerializeField] Animator ShakeAnim;
     [SerializeField] Animator PilotAnim;
 
     float VelocityLerp = 0;
@@ -22,7 +22,7 @@ public class Scr_MechFootSteps : MonoBehaviour
     {
         AS.pitch =Random.Range(0.9f,1f);
         AS.PlayOneShot(StepSound);
-        ShakeAnim.SetTrigger("Shake");
+        //ShakeAnim.SetTrigger("Shake");
         PilotAnim.SetTrigger("Shake");
     }
 

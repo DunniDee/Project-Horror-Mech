@@ -27,6 +27,14 @@ public class @MechControlls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""Rotation"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""041414f2-795a-464c-a0b1-bfe7fc2b823e"",
+                    ""expectedControlType"": ""Double"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""132dd503-92ab-4f8c-804b-c2a074aca5ac"",
@@ -177,6 +185,39 @@ public class @MechControlls : IInputActionCollection, IDisposable
                     ""action"": ""Lock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""QE"",
+                    ""id"": ""4086a810-6067-4488-867a-4f85db843c38"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""a4b33302-3cc4-4c46-ae7d-8bb2c4049f04"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""bf76cbbb-dca1-4b7b-9ac8-dd8278f17dac"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -186,6 +227,7 @@ public class @MechControlls : IInputActionCollection, IDisposable
         // GroundMevment
         m_GroundMevment = asset.FindActionMap("GroundMevment", throwIfNotFound: true);
         m_GroundMevment_HorizontalMovement = m_GroundMevment.FindAction("HorizontalMovement", throwIfNotFound: true);
+        m_GroundMevment_Rotation = m_GroundMevment.FindAction("Rotation", throwIfNotFound: true);
         m_GroundMevment_Jump = m_GroundMevment.FindAction("Jump", throwIfNotFound: true);
         m_GroundMevment_MouseX = m_GroundMevment.FindAction("MouseX", throwIfNotFound: true);
         m_GroundMevment_MouseY = m_GroundMevment.FindAction("MouseY", throwIfNotFound: true);
@@ -241,6 +283,7 @@ public class @MechControlls : IInputActionCollection, IDisposable
     private readonly InputActionMap m_GroundMevment;
     private IGroundMevmentActions m_GroundMevmentActionsCallbackInterface;
     private readonly InputAction m_GroundMevment_HorizontalMovement;
+    private readonly InputAction m_GroundMevment_Rotation;
     private readonly InputAction m_GroundMevment_Jump;
     private readonly InputAction m_GroundMevment_MouseX;
     private readonly InputAction m_GroundMevment_MouseY;
@@ -251,6 +294,7 @@ public class @MechControlls : IInputActionCollection, IDisposable
         private @MechControlls m_Wrapper;
         public GroundMevmentActions(@MechControlls wrapper) { m_Wrapper = wrapper; }
         public InputAction @HorizontalMovement => m_Wrapper.m_GroundMevment_HorizontalMovement;
+        public InputAction @Rotation => m_Wrapper.m_GroundMevment_Rotation;
         public InputAction @Jump => m_Wrapper.m_GroundMevment_Jump;
         public InputAction @MouseX => m_Wrapper.m_GroundMevment_MouseX;
         public InputAction @MouseY => m_Wrapper.m_GroundMevment_MouseY;
@@ -268,6 +312,9 @@ public class @MechControlls : IInputActionCollection, IDisposable
                 @HorizontalMovement.started -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.performed -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.canceled -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnHorizontalMovement;
+                @Rotation.started -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnRotation;
+                @Rotation.performed -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnRotation;
+                @Rotation.canceled -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnRotation;
                 @Jump.started -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_GroundMevmentActionsCallbackInterface.OnJump;
@@ -290,6 +337,9 @@ public class @MechControlls : IInputActionCollection, IDisposable
                 @HorizontalMovement.started += instance.OnHorizontalMovement;
                 @HorizontalMovement.performed += instance.OnHorizontalMovement;
                 @HorizontalMovement.canceled += instance.OnHorizontalMovement;
+                @Rotation.started += instance.OnRotation;
+                @Rotation.performed += instance.OnRotation;
+                @Rotation.canceled += instance.OnRotation;
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
@@ -312,6 +362,7 @@ public class @MechControlls : IInputActionCollection, IDisposable
     public interface IGroundMevmentActions
     {
         void OnHorizontalMovement(InputAction.CallbackContext context);
+        void OnRotation(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnMouseX(InputAction.CallbackContext context);
         void OnMouseY(InputAction.CallbackContext context);
