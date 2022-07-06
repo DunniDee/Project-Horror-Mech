@@ -16,10 +16,14 @@ public class Scr_LightPanel : MonoBehaviour
         High,
     }
 
-   [SerializeField] GameObject Lights;
-   [SerializeField] GameObject FloodLights;
+    [SerializeField] GameObject Lights;
+    [SerializeField] GameObject FloodLights;
+    [SerializeField] LightState CurrentLight;
 
-   [SerializeField] LightState CurrentLight;
+    [SerializeField] Scr_HudLight OffLightsHud;
+    [SerializeField] Scr_HudLight LightsHud;
+    [SerializeField] Scr_HudLight FloodLightsHud;
+
 
     public void LightOff()
     {
@@ -31,6 +35,11 @@ public class Scr_LightPanel : MonoBehaviour
         Lights.SetActive(false);
         FloodLights.SetActive(false);
         AS.PlayOneShot(OffSound);
+
+        OffLightsHud.IsOn = true;
+        LightsHud.IsOn = false;
+        FloodLightsHud.IsOn = false;
+        
     }
 
     public void LightOn()
@@ -43,6 +52,10 @@ public class Scr_LightPanel : MonoBehaviour
         Lights.SetActive(true);
         FloodLights.SetActive(false);
         AS.PlayOneShot(OnSound);
+
+        OffLightsHud.IsOn = false;
+        LightsHud.IsOn = true;
+        FloodLightsHud.IsOn = false;
     }
 
     public void LightHigh()
@@ -55,5 +68,9 @@ public class Scr_LightPanel : MonoBehaviour
         Lights.SetActive(false);
         FloodLights.SetActive(true);
         AS.PlayOneShot(HighSound);
+
+        OffLightsHud.IsOn = false;
+        LightsHud.IsOn = false;
+        FloodLightsHud.IsOn = true;
     }
 }
