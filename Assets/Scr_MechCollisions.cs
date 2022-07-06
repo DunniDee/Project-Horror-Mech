@@ -57,6 +57,8 @@ public class Scr_MechCollisions : MonoBehaviour
             Collided = false;
         }
         WasColliding = IsColliding;
+
+        Anim.SetFloat("ShakeLerp", AS.volume);
     }
 
     void CheckCollision(Transform Pos, int index)
