@@ -11,6 +11,8 @@ public class Scr_MechLook : MonoBehaviour
     [SerializeField] Transform LookCam;
     [SerializeField] Transform MechAgent;
 
+    [SerializeField] AudioSource RotateAS;
+
     public bool IsLocked;
 
     Vector2 MouseInput;
@@ -30,6 +32,19 @@ public class Scr_MechLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {    
+        if (MouseInput != Vector2.zero && !IsLocked || MechRotation.x != 0)
+        {
+            RotateAS.volume = Mathf.Lerp( RotateAS.volume, 1, Time.deltaTime * 5);
+            RotateAS.pitch = Mathf.Lerp( RotateAS.pitch, 1.25f, Time.deltaTime * 2);
+        }
+        else
+        {
+            RotateAS.volume = Mathf.Lerp( RotateAS.volume, 0, Time.deltaTime * 5);
+            RotateAS.pitch = Mathf.Lerp( RotateAS.pitch, 0.8f, Time.deltaTime * 2);
+        }
+
+
+
         if (MouseInput.sqrMagnitude > SwivelSpeed * SwivelSpeed)
         {
             MouseInput = MouseInput.normalized * SwivelSpeed;
