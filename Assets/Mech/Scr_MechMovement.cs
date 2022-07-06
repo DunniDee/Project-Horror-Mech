@@ -20,6 +20,7 @@ public class Scr_MechMovement : MonoBehaviour
     
 
     public bool IsGrounded;
+    public bool IsMoving;
     
     
     [SerializeField] float DashSpeed;
@@ -71,11 +72,13 @@ public class Scr_MechMovement : MonoBehaviour
             {
                 EngineVolume = Mathf.Lerp(EngineVolume, 0.5f, Time.deltaTime );
                 EnginePitch = Mathf.Lerp(EnginePitch, 1, Time.deltaTime);
+                IsMoving = true;
             }
             else
             {
                 EngineVolume = Mathf.Lerp(EngineVolume, 0.15f, Time.deltaTime);
                 EnginePitch = Mathf.Lerp(EnginePitch, 0.8f, Time.deltaTime);
+                IsMoving = false;
             }
 
             EngineAS.volume = EngineVolume;
