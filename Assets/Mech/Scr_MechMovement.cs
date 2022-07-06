@@ -13,6 +13,11 @@ public class Scr_MechMovement : MonoBehaviour
     [SerializeField] LayerMask GroundMask;
     Vector3 verticalVelcoity;
 
+    [SerializeField] AudioSource EngineAS;
+    float EngineVolume;
+    float EnginePitch;
+    
+
     public bool IsGrounded;
     
     bool ToDash;
@@ -40,6 +45,20 @@ public class Scr_MechMovement : MonoBehaviour
 
         verticalVelcoity.y += Gravity * Time.deltaTime;
         controller.Move(verticalVelcoity * Time.deltaTime);
+
+        if (horizontalInput != Vector2.zero)
+        {
+            EngineVolume = Mathf.Lerp(EngineVolume, 0.5f, Time.deltaTime );
+            EnginePitch = Mathf.Lerp(EnginePitch, 1, Time.deltaTime);
+        }
+        else
+        {
+            EngineVolume = Mathf.Lerp(EngineVolume, 0.15f, Time.deltaTime);
+            EnginePitch = Mathf.Lerp(EnginePitch, 0.8f, Time.deltaTime);
+        }
+
+        EngineAS.volume = EngineVolume;
+        EngineAS.pitch = EnginePitch;
     }
 
     public void Dash()

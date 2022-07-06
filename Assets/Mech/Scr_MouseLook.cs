@@ -110,6 +110,13 @@ public class Scr_MouseLook : MonoBehaviour
 
     public void Click()
     {
-        Debug.Log("Click");
+        RaycastHit hit;
+        if (Physics.Raycast(LookCam.transform.position,LookCam.transform.forward,out hit,5))
+        {
+            if (hit.collider.CompareTag("Button"))
+            {
+               hit.collider.GetComponent<Scr_Button>().OnButtonPress(); 
+            }
+        }
     }
 }

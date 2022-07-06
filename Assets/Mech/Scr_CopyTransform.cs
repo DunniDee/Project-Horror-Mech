@@ -9,7 +9,7 @@ public class Scr_CopyTransform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Other.rotation;
-        transform.rotation*= Quaternion.Euler(0,180,0);
+        transform.localRotation = Other.rotation;
+        transform.localRotation *= Quaternion.Euler(0,180,0);
     }
 }
