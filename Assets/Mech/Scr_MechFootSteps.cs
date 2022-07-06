@@ -21,7 +21,7 @@ public class Scr_MechFootSteps : MonoBehaviour
     public void Step()
     {
         AS.pitch =Random.Range(0.9f,1f);
-        AS.PlayOneShot(StepSound);
+        AS.PlayOneShot(StepSound, 1.25f);
         //ShakeAnim.SetTrigger("Shake");
         PilotAnim.SetTrigger("Shake");
     }

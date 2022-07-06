@@ -5000,8 +5000,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
-  m_Pitch: 1.15
+  m_Volume: 0.075
+  m_Pitch: 2
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -5044,7 +5044,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5712,6 +5712,7 @@ GameObject:
   - component: {fileID: 4835386819137926514}
   - component: {fileID: 4804606627310662546}
   - component: {fileID: 1639605305}
+  - component: {fileID: 5428264338257156693}
   m_Layer: 0
   m_Name: Cube (18)
   m_TagString: Untagged
@@ -5796,6 +5797,25 @@ BoxCollider:
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1639605305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876620639099696556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be2d6d9dddbd574b9327ef2c53d9a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OffMat: {fileID: 2100000, guid: 371653be8a655244399f0bed0df03be5, type: 2}
+  OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
+  IsOn: 0
+  BlinkTime: 0.1
+  IsBlinking: 0
+  AS: {fileID: 0}
+  BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+--- !u!114 &5428264338257156693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6129,6 +6149,7 @@ GameObject:
   - component: {fileID: 9209713648483909079}
   - component: {fileID: 3466416128855132998}
   - component: {fileID: 414487235}
+  - component: {fileID: 3203055988418134527}
   m_Layer: 0
   m_Name: Cube (21)
   m_TagString: Untagged
@@ -6213,6 +6234,25 @@ BoxCollider:
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &414487235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130468162238697321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be2d6d9dddbd574b9327ef2c53d9a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OffMat: {fileID: 2100000, guid: 371653be8a655244399f0bed0df03be5, type: 2}
+  OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
+  IsOn: 0
+  BlinkTime: 0.1
+  IsBlinking: 0
+  AS: {fileID: 0}
+  BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+--- !u!114 &3203055988418134527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6339,6 +6379,7 @@ GameObject:
   - component: {fileID: 2302454783237150496}
   - component: {fileID: 3013797719531480939}
   - component: {fileID: 1962032612}
+  - component: {fileID: 3173245795511759275}
   m_Layer: 0
   m_Name: Cube (19)
   m_TagString: Untagged
@@ -6438,6 +6479,25 @@ MonoBehaviour:
   OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
   IsOn: 0
   BlinkTime: 0.1
+  IsBlinking: 0
+  AS: {fileID: 0}
+  BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+--- !u!114 &3173245795511759275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399141988162406868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be2d6d9dddbd574b9327ef2c53d9a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OffMat: {fileID: 2100000, guid: 371653be8a655244399f0bed0df03be5, type: 2}
+  OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
+  IsOn: 0
+  BlinkTime: 0.1
   IsBlinking: 1
   AS: {fileID: 2021654236}
   BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
@@ -6454,6 +6514,7 @@ GameObject:
   - component: {fileID: 6455815256365335505}
   - component: {fileID: 1917714133526654937}
   - component: {fileID: 288755096}
+  - component: {fileID: 3746237172056716296}
   m_Layer: 0
   m_Name: Cube (25)
   m_TagString: Untagged
@@ -6553,6 +6614,25 @@ MonoBehaviour:
   OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
   IsOn: 0
   BlinkTime: 0.1
+  IsBlinking: 0
+  AS: {fileID: 0}
+  BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+--- !u!114 &3746237172056716296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538798522172343770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be2d6d9dddbd574b9327ef2c53d9a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OffMat: {fileID: 2100000, guid: 371653be8a655244399f0bed0df03be5, type: 2}
+  OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
+  IsOn: 0
+  BlinkTime: 0.1
   IsBlinking: 1
   AS: {fileID: 2021654236}
   BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
@@ -6569,6 +6649,7 @@ GameObject:
   - component: {fileID: 3997105367757948880}
   - component: {fileID: 5285092103195986672}
   - component: {fileID: 1522454626}
+  - component: {fileID: 199454475760787948}
   m_Layer: 0
   m_Name: Cube (24)
   m_TagString: Untagged
@@ -6653,6 +6734,25 @@ BoxCollider:
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1522454626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768802527161627057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be2d6d9dddbd574b9327ef2c53d9a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OffMat: {fileID: 2100000, guid: 371653be8a655244399f0bed0df03be5, type: 2}
+  OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
+  IsOn: 0
+  BlinkTime: 0.1
+  IsBlinking: 0
+  AS: {fileID: 0}
+  BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+--- !u!114 &199454475760787948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9190,7 +9290,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   EngineAS: {fileID: 75223034}
+  DashSound: {fileID: 8300000, guid: 2bb01d5f10d7e7f46846839012d2ad2a, type: 3}
   IsGrounded: 0
+  DashSpeed: 25
+  DashTime: 0.5
+  Tilt: {fileID: 488299383}
 --- !u!114 &3744990168365726967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10239,7 +10343,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.5802777, g: 0.74899995, b: 0.754717, a: 1}
-  m_Intensity: 139.26057
+  m_Intensity: 111.408455
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -10342,7 +10446,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 1750
+  m_Intensity: 1400
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -10975,6 +11079,7 @@ GameObject:
   - component: {fileID: 6686390158383841749}
   - component: {fileID: 3702382397943642816}
   - component: {fileID: 673337070}
+  - component: {fileID: 4286894344550970136}
   m_Layer: 0
   m_Name: Cube (23)
   m_TagString: Untagged
@@ -11074,6 +11179,25 @@ MonoBehaviour:
   OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
   IsOn: 0
   BlinkTime: 0.1
+  IsBlinking: 0
+  AS: {fileID: 0}
+  BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+--- !u!114 &4286894344550970136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3951278087473883821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be2d6d9dddbd574b9327ef2c53d9a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OffMat: {fileID: 2100000, guid: 371653be8a655244399f0bed0df03be5, type: 2}
+  OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
+  IsOn: 0
+  BlinkTime: 0.1
   IsBlinking: 1
   AS: {fileID: 2021654236}
   BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
@@ -11141,6 +11265,7 @@ GameObject:
   - component: {fileID: 3455507002258313041}
   - component: {fileID: 509395995631392280}
   - component: {fileID: 887130002}
+  - component: {fileID: 7584344805686821285}
   m_Layer: 0
   m_Name: Cube (20)
   m_TagString: Untagged
@@ -11225,6 +11350,25 @@ BoxCollider:
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &887130002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4065049217674564332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be2d6d9dddbd574b9327ef2c53d9a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OffMat: {fileID: 2100000, guid: 371653be8a655244399f0bed0df03be5, type: 2}
+  OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
+  IsOn: 0
+  BlinkTime: 0.1
+  IsBlinking: 0
+  AS: {fileID: 0}
+  BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+--- !u!114 &7584344805686821285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11671,6 +11815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 624749851705683441}
+  - component: {fileID: 488299383}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -11697,6 +11842,20 @@ Transform:
   m_Father: {fileID: 7509668831998695267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &488299383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6453294198102891317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9169d00e8b630049a5b222952a57675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotateTo: {x: 0, y: 0, z: 0}
+  CurrentRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &7122254971295940987
 GameObject:
   m_ObjectHideFlags: 0
@@ -11710,6 +11869,7 @@ GameObject:
   - component: {fileID: 8615363131616477910}
   - component: {fileID: 2042201106987046726}
   - component: {fileID: 1740744347}
+  - component: {fileID: 1221272572124866749}
   m_Layer: 0
   m_Name: Cube (22)
   m_TagString: Untagged
@@ -11794,6 +11954,25 @@ BoxCollider:
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1740744347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7122254971295940987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be2d6d9dddbd574b9327ef2c53d9a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OffMat: {fileID: 2100000, guid: 371653be8a655244399f0bed0df03be5, type: 2}
+  OnMat: {fileID: 2100000, guid: c14a170818d4f05448e3bcc417fe7a1d, type: 2}
+  IsOn: 0
+  BlinkTime: 0.1
+  IsBlinking: 0
+  AS: {fileID: 0}
+  BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+--- !u!114 &1221272572124866749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12764,14 +12943,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lights:
-  - {fileID: 1639605305}
-  - {fileID: 1740744347}
-  - {fileID: 414487235}
-  - {fileID: 673337070}
-  - {fileID: 1962032612}
-  - {fileID: 1522454626}
-  - {fileID: 887130002}
-  - {fileID: 288755096}
+  - {fileID: 5428264338257156693}
+  - {fileID: 1221272572124866749}
+  - {fileID: 3203055988418134527}
+  - {fileID: 4286894344550970136}
+  - {fileID: 3173245795511759275}
+  - {fileID: 199454475760787948}
+  - {fileID: 7584344805686821285}
+  - {fileID: 3746237172056716296}
   ScannerPos:
   - {fileID: 660605990}
   - {fileID: 47949893}

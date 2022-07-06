@@ -31,6 +31,8 @@ public class Scr_MechMovement : MonoBehaviour
 
     Vector2 horizontalInput;
     Vector3 CurrentMoveVec;
+
+    [SerializeField] Scr_CockpitTilter Tilt;
     public void RecieveInput (Vector2 _horizontalInput)
     {
         horizontalInput = _horizontalInput;
@@ -38,17 +40,19 @@ public class Scr_MechMovement : MonoBehaviour
 
     private void Update() 
     { 
+        Tilt.RotateTo += new Vector3(horizontalInput.y,0,-horizontalInput.x).normalized * Time.deltaTime;
+
         IsGrounded = Physics.CheckSphere(MechAgent.position,0.5f,GroundMask);
         
         if (DashTimer >= 0)
         {
             DashTimer -= Time.deltaTime;
-            CurrentDashSpeed = Mathf.Lerp(CurrentDashSpeed, DashSpeed, Time.deltaTime * 5);
+            CurrentDashSpeed = Mathf.Lerp(CurrentDashSpeed, DashSpeed, Time.deltaTime * 10);
             controller.Move(CurrentDashVec * CurrentDashSpeed * Time.deltaTime);
         }
         else
         {
-            CurrentDashSpeed = Mathf.Lerp(CurrentDashSpeed, 0, Time.deltaTime * 5);
+            CurrentDashSpeed = Mathf.Lerp(CurrentDashSpeed, 0, Time.deltaTime * 4);
             controller.Move(CurrentDashVec * CurrentDashSpeed * Time.deltaTime);
             
             if (IsGrounded)
@@ -92,7 +96,9 @@ public class Scr_MechMovement : MonoBehaviour
         {
             CurrentDashVec = CurrentMoveVec;
             CurrentDashVec = CurrentDashVec.normalized;
+
         }
+        Tilt.RotateTo += new Vector3(horizontalInput.y,0,-horizontalInput.x).normalized * 2;
     }
 
     public Vector2 GetHorizontalInput()
