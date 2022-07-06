@@ -262,7 +262,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a9f08faa49afb8641a2f8c0e575c593f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 656d5b068cbb89c43b69ed3eba53c47e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6853,7 +6853,7 @@ MonoBehaviour:
   AS: {fileID: 1389680072}
   OffSound: {fileID: 8300000, guid: 758a8c5dc17a99047a31d81d75fa4960, type: 3}
   OnSound: {fileID: 8300000, guid: 758a8c5dc17a99047a31d81d75fa4960, type: 3}
-  HighSound: {fileID: 8300000, guid: 23fc47abcce1a2e47a9a1e25c2cf9bd8, type: 3}
+  HighSound: {fileID: 8300000, guid: 6207c7d69a971e344860d5d2660a38f3, type: 3}
   Lights: {fileID: 4990218995479328625}
   FloodLights: {fileID: 7707170713452572981}
   CurrentLight: 0
@@ -9290,7 +9290,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   EngineAS: {fileID: 75223034}
-  DashSound: {fileID: 8300000, guid: 2bb01d5f10d7e7f46846839012d2ad2a, type: 3}
+  DashSound: {fileID: 8300000, guid: f640ddb02ae9b8e4fb7ed3e602832ebf, type: 3}
   IsGrounded: 0
   DashSpeed: 25
   DashTime: 0.5
