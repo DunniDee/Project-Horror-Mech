@@ -21,6 +21,7 @@ public class Scr_MouseLook : MonoBehaviour
 
     [SerializeField] Camera LookCam;
     [SerializeField] Transform CamSwivel;
+    [SerializeField] Scr_MechWeapons Weapons;
 
     public bool IsLocked;
 
@@ -116,6 +117,11 @@ public class Scr_MouseLook : MonoBehaviour
             if (hit.collider.CompareTag("Button"))
             {
                hit.collider.GetComponent<Scr_Button>().OnButtonPress(); 
+            }
+
+            if (IsLocked)
+            {
+                Weapons.Shoot();
             }
         }
     }

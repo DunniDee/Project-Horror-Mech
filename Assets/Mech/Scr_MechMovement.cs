@@ -44,6 +44,11 @@ public class Scr_MechMovement : MonoBehaviour
         Tilt.RotateTo += new Vector3(horizontalInput.y,0,-horizontalInput.x).normalized * Time.deltaTime;
 
         IsGrounded = Physics.CheckSphere(MechAgent.position,0.5f,GroundMask);
+        if (IsGrounded)
+        {
+            verticalVelcoity.y = 0;
+        }
+
         
         if (DashTimer >= 0)
         {
@@ -56,11 +61,6 @@ public class Scr_MechMovement : MonoBehaviour
             CurrentDashSpeed = Mathf.Lerp(CurrentDashSpeed, 0, Time.deltaTime * 4);
             controller.Move(CurrentDashVec * CurrentDashSpeed * Time.deltaTime);
             
-            if (IsGrounded)
-            {
-                verticalVelcoity.y = 0;
-            }
-
             Vector3 horizontalVelocity = (MechAgent.right * horizontalInput.x + MechAgent.forward * horizontalInput.y).normalized * speed;
             CurrentMoveVec = Vector3.Lerp(CurrentMoveVec,horizontalVelocity,Time.deltaTime * 5);
             controller.Move(CurrentMoveVec * Time.deltaTime);
@@ -101,7 +101,7 @@ public class Scr_MechMovement : MonoBehaviour
             CurrentDashVec = CurrentDashVec.normalized;
 
         }
-        Tilt.RotateTo += new Vector3(horizontalInput.y,0,-horizontalInput.x).normalized * 2;
+        Tilt.RotateTo += new Vector3(horizontalInput.y,0,-horizontalInput.x).normalized * 3;
     }
 
     public Vector2 GetHorizontalInput()

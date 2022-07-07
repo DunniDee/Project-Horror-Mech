@@ -9,6 +9,7 @@ public class Scr_MechCollisions : MonoBehaviour
     [SerializeField] AudioSource ImpactAS;
     [SerializeField] AudioClip Impact;
     [SerializeField] Scr_MechMovement Movement;
+    [SerializeField] Scr_MechLook MechLook;
     [SerializeField] Scr_CockpitTilter Tilt;
     [SerializeField] Animator Anim;
 
@@ -33,8 +34,9 @@ public class Scr_MechCollisions : MonoBehaviour
         if (IsColliding)
         {
             AS.transform.position = CollisionPos;
-            Tilt.RotateTo += CollsionTilt * Time.deltaTime;
-            if (Movement.IsMoving)
+            Tilt.RotateTo += CollsionTilt * 2 * Time.deltaTime;
+
+            if (Movement.IsMoving || MechLook.IsRotating)
             {
                 AS.volume = Mathf.Lerp (AS.volume,1,Time.deltaTime * 2);
             }
@@ -45,7 +47,7 @@ public class Scr_MechCollisions : MonoBehaviour
 
             if (!WasColliding && !Collided)
             {
-                ImpactAS.PlayOneShot(Impact);
+                ImpactAS.PlayOneShot(Impact,0.75f);
                 Tilt.RotateTo += CollsionTilt;
                 Collided = true;
                 Anim.SetTrigger("BigShake");

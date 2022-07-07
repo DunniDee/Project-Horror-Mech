@@ -15,6 +15,8 @@ public class Scr_MechLook : MonoBehaviour
 
     public bool IsLocked;
 
+    public bool IsRotating;
+
     Vector2 MouseInput;
     [SerializeField] Vector2 LookClamp;
     Vector2 LookRotation;
@@ -36,11 +38,13 @@ public class Scr_MechLook : MonoBehaviour
         {
             RotateAS.volume = Mathf.Lerp( RotateAS.volume, 1, Time.deltaTime * 5);
             RotateAS.pitch = Mathf.Lerp( RotateAS.pitch, 1.25f, Time.deltaTime * 2);
+            IsRotating = true;
         }
         else
         {
             RotateAS.volume = Mathf.Lerp( RotateAS.volume, 0, Time.deltaTime * 5);
             RotateAS.pitch = Mathf.Lerp( RotateAS.pitch, 0.8f, Time.deltaTime * 2);
+            IsRotating = false;
         }
 
 
