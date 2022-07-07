@@ -13538,6 +13538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lighting+PostProcc
       objectReference: {fileID: 0}
+    - target: {fileID: 8905606122473944910, guid: 7d46d0093ea692f42a3f1220b943b0a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8905606122657682021, guid: 7d46d0093ea692f42a3f1220b943b0a3, type: 3}
       propertyPath: m_Intensity
       value: 1200
