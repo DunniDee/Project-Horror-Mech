@@ -15,8 +15,8 @@ public class Scr_AmmoShell : MonoBehaviour
     {
         if (IsHeld)
         {
-            transform.position = Vector3.Lerp(transform.position, FollowPoint, Time.deltaTime * 4);
-            transform.rotation = Quaternion.Lerp(transform.rotation,Quaternion.Euler(90,0,0), Time.deltaTime * 4);
+            transform.position = Vector3.Lerp(transform.position, FollowPoint, Time.deltaTime * 6);
+            transform.rotation = Quaternion.Lerp(transform.rotation,Quaternion.Euler(90,0,0), Time.deltaTime * 6);
         }
 
         RB.isKinematic = IsHeld;
