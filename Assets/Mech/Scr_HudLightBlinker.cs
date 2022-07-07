@@ -9,6 +9,7 @@ public class Scr_HudLightBlinker : Scr_HudLight
 
     [SerializeField] AudioSource AS;
     [SerializeField] AudioClip BlinkSound;
+    [SerializeField] float volume;
 
     float Timer;
 
@@ -27,7 +28,7 @@ public class Scr_HudLightBlinker : Scr_HudLight
             {
                 Timer = BlinkTime;
                 IsOn = !IsOn;
-                AS.PlayOneShot(BlinkSound);
+                AS.PlayOneShot(BlinkSound,volume);
             }
         }
         else

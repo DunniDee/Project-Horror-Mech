@@ -29,6 +29,9 @@ public class Scr_MouseLook : MonoBehaviour
     [SerializeField] Vector2 LookClamp;
     Vector2 LookRotation;
 
+
+    public Scr_AmmoShell Shell;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +85,10 @@ public class Scr_MouseLook : MonoBehaviour
         CamSwivel.localRotation = Quaternion.Euler(0,LookRotation.x,0);
         LookCam.transform.localRotation = Quaternion.Euler(LookRotation.y,0,0);
 
-
+        if (Shell != null)
+        {
+            Shell.FollowPoint = LookCam.transform.position + LookCam.transform.forward * 0.75f;
+        }
 
     }
 

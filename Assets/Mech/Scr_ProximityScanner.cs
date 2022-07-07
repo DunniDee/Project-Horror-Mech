@@ -6,7 +6,6 @@ public class Scr_ProximityScanner : MonoBehaviour
 {
     [SerializeField] Scr_HudLightBlinker[] Lights;
     [SerializeField] Transform[] ScannerPos;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +14,13 @@ public class Scr_ProximityScanner : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         for (int i = 0; i < 8; i++)
         {
             CheckScanner(ScannerPos[i], i);
         }
     }
+
 
     void CheckScanner(Transform Pos, int BlinkIndex)
     {
