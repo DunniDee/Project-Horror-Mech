@@ -6,7 +6,7 @@ public class Scr_MechLook : MonoBehaviour
 {
     [SerializeField] float SensitivityX = 8;
     [SerializeField] float SensitivityY = 8;
-    [SerializeField] float SwivelSpeed = 8;
+    public float SwivelSpeed = 8;
 
     [SerializeField] Transform LookCam;
     [SerializeField] Transform MechAgent;

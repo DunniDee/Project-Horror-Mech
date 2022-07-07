@@ -65,9 +65,6 @@ public class Scr_MechMovement : MonoBehaviour
             CurrentMoveVec = Vector3.Lerp(CurrentMoveVec,horizontalVelocity,Time.deltaTime * 5);
             controller.Move(CurrentMoveVec * Time.deltaTime);
 
-            verticalVelcoity.y += Gravity * Time.deltaTime;
-            controller.Move(verticalVelcoity * Time.deltaTime);
-
             if (horizontalInput != Vector2.zero)
             {
                 EngineVolume = Mathf.Lerp(EngineVolume, 0.5f, Time.deltaTime );
@@ -84,6 +81,9 @@ public class Scr_MechMovement : MonoBehaviour
             EngineAS.volume = EngineVolume;
             EngineAS.pitch = EnginePitch;
         }
+
+            verticalVelcoity.y += Gravity * Time.deltaTime;
+            controller.Move(verticalVelcoity * Time.deltaTime);
     }
 
     public void Dash()
@@ -94,6 +94,7 @@ public class Scr_MechMovement : MonoBehaviour
         if (horizontalInput == Vector2.zero)
         {
             CurrentDashVec = MechAgent.forward;
+             Tilt.RotateTo += new Vector3(3,0,0);
         }
         else
         {

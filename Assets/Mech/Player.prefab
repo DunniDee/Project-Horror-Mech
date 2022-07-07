@@ -237,8 +237,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.2887497, z: 0.71155286}
-  m_Center: {x: 0.75, y: 2.8556252, z: -0.15577656}
+  m_Size: {x: 0.5, y: 0.22470093, z: 0.71155286}
+  m_Center: {x: 0.75, y: 2.8876495, z: -0.15577656}
 --- !u!114 &1418128275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,6 +1365,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &318789984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318789985}
+  m_Layer: 0
+  m_Name: ShootPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &318789985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318789984}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6645823805454745606}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &343102487
 GameObject:
   m_ObjectHideFlags: 0
@@ -8865,7 +8895,8 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0.000000089649895, z: 0.000000005356203, w: 0.7071067}
   m_LocalPosition: {x: 0.000000007450581, y: 0.5859999, z: 1.1599998}
   m_LocalScale: {x: 66, y: 66, z: 66}
-  m_Children: []
+  m_Children:
+  - {fileID: 318789985}
   m_Father: {fileID: 543450652887317980}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10932,7 +10963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anim: {fileID: 919132148902733671}
-  ShootPos: {fileID: 0}
+  BulletPrefab: {fileID: 2759298886911763299, guid: ca2e4f4e47af8304c85df491b8e1152f, type: 3}
+  ShootPos: {fileID: 318789985}
   AS: {fileID: 1088251109}
   ShootSound: {fileID: 8300000, guid: d92741a1f9e1c854a81e0a8a51853534, type: 3}
   Tilt: {fileID: 488299383}

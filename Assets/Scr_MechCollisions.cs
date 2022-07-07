@@ -54,17 +54,21 @@ public class Scr_MechCollisions : MonoBehaviour
                 Collided = true;
                 Anim.SetTrigger("BigShake");
             }
+
+            MechLook.SwivelSpeed = 25;
         }
         else
         {
             AS.volume = Mathf.Lerp (AS.volume,0,Time.deltaTime * 2);
             Collided = false;
+            MechLook.SwivelSpeed = 75;
         }
         WasColliding = IsColliding;
 
         CollisionLight.IsBlinking = Collided;
 
         Anim.SetFloat("ShakeLerp", AS.volume);
+
     }
 
     void CheckCollision(Transform Pos, int index)

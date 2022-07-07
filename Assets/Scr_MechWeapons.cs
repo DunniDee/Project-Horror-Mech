@@ -5,6 +5,7 @@ using UnityEngine;
 public class Scr_MechWeapons : MonoBehaviour
 {
     [SerializeField] Animator Anim;
+    [SerializeField] GameObject BulletPrefab;
     [SerializeField] Transform ShootPos;
     [SerializeField] AudioSource AS;
     [SerializeField] AudioClip ShootSound;
@@ -63,6 +64,7 @@ public class Scr_MechWeapons : MonoBehaviour
             ShakeAnim.SetTrigger("Shake");
             ShotTimer = FireRate;
             AmmoCount--;
+            Instantiate(BulletPrefab,ShootPos.position,ShootPos.rotation);
         }
     }
 }
