@@ -21,6 +21,8 @@ public class Scr_MechCollisions : MonoBehaviour
 
     Vector3 CollsionTilt;
 
+    [SerializeField] Scr_HudLightBlinker CollisionLight;
+
 
 
     void Update()
@@ -59,6 +61,8 @@ public class Scr_MechCollisions : MonoBehaviour
             Collided = false;
         }
         WasColliding = IsColliding;
+
+        CollisionLight.IsBlinking = Collided;
 
         Anim.SetFloat("ShakeLerp", AS.volume);
     }

@@ -15,6 +15,10 @@ public class Scr_MechWeapons : MonoBehaviour
     [SerializeField] Transform GunTransform;
     [SerializeField] Scr_HudLightBlinker Blinker;
     [SerializeField] Scr_HudLight AmmoLight;
+
+    public int MaxAmmo;
+    public int AmmoCount;
+
     bool IsObtructed;
 
     [SerializeField] float FireRate;
@@ -26,7 +30,7 @@ public class Scr_MechWeapons : MonoBehaviour
         if (Physics.Raycast(CheckPos.position, CheckPos.forward, 5))
         {
             GunTransform.localRotation = Quaternion.Lerp(GunTransform.localRotation, Quaternion.Euler(45,0,0), Time.deltaTime * 2);
-            GunTransform.localPosition = Vector3.Lerp(GunTransform.localPosition,new Vector3(0,-1,0), Time.deltaTime * 2);
+            GunTransform.localPosition = Vector3.Lerp(GunTransform.localPosition,new Vector3(0,-1,-5), Time.deltaTime * 2);
             Blinker.IsBlinking = true;
             IsObtructed = true;
         }
@@ -51,13 +55,14 @@ public class Scr_MechWeapons : MonoBehaviour
 
     public void Shoot()
     {
-        if (!IsObtructed && ShotTimer <= 0)
+        if (!IsObtructed && ShotTimer <= 0 && AmmoCount > 0)
         {
             Anim.SetTrigger("Shoot");
             AS.PlayOneShot(ShootSound);
-            Tilt.RotateTo += new Vector3(-5,10,0);
+            Tilt.RotateTo += new Vector3(-2,10,0);
             ShakeAnim.SetTrigger("Shake");
             ShotTimer = FireRate;
+            AmmoCount--;
         }
     }
 }
