@@ -58,10 +58,12 @@ public class Scr_MechCollisions : MonoBehaviour
             if (Movement.IsMoving || MechLook.IsRotating)
             {
                 AS.volume = Mathf.Lerp (AS.volume,1,Time.deltaTime * 2);
+                ScreenMatLerp = Mathf.Lerp(ScreenMatLerp, -0.25f, Time.deltaTime * 2.5f);
             }
             else
             {
                 AS.volume = Mathf.Lerp (AS.volume,0,Time.deltaTime * 2);  
+                ScreenMatLerp = Mathf.Lerp(ScreenMatLerp, 0.075f, Time.deltaTime * 2.5f);
             }
 
             if (!WasColliding && !Collided)
@@ -78,6 +80,7 @@ public class Scr_MechCollisions : MonoBehaviour
         else
         {
             AS.volume = Mathf.Lerp (AS.volume,0,Time.deltaTime * 2);
+            ScreenMatLerp = Mathf.Lerp(ScreenMatLerp, 0.075f, Time.deltaTime * 2.5f);
             Collided = false;
             MechLook.SwivelSpeed = 75;
         }
@@ -87,7 +90,6 @@ public class Scr_MechCollisions : MonoBehaviour
 
         Anim.SetFloat("ShakeLerp", AS.volume);
 
-        ScreenMatLerp = Mathf.Lerp(ScreenMatLerp, 0.075f, Time.deltaTime * 2.5f);
     }
 
     void CheckCollision(Transform Pos, int index)
