@@ -12,6 +12,13 @@ public class Scr_MechCollisions : MonoBehaviour
     [SerializeField] Scr_MechLook MechLook;
     [SerializeField] Scr_CockpitTilter Tilt;
     [SerializeField] Animator Anim;
+    [SerializeField] LayerMask GroundMask;
+
+    [SerializeField] Renderer ScreenRend;
+    [SerializeField] Material ScreenMat;
+    public float ScreenMatLerp;
+
+
 
     bool WasColliding;
     bool Collided;
@@ -23,10 +30,20 @@ public class Scr_MechCollisions : MonoBehaviour
 
     [SerializeField] Scr_HudLightBlinker CollisionLight;
 
-
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
+    {
+        ScreenMat = ScreenRend.sharedMaterial;
+        ScreenMat.SetFloat("_Opacity",ScreenMatLerp);
+    }
 
     void Update()
     {
+        ScreenMat.SetFloat("_Opacity",ScreenMatLerp);
+
         IsColliding = false;
         for (int i = 0; i < 8; i++)
         {
@@ -41,10 +58,12 @@ public class Scr_MechCollisions : MonoBehaviour
             if (Movement.IsMoving || MechLook.IsRotating)
             {
                 AS.volume = Mathf.Lerp (AS.volume,1,Time.deltaTime * 2);
+                ScreenMatLerp = Mathf.Lerp(ScreenMatLerp, -0.25f, Time.deltaTime * 2.5f);
             }
             else
             {
                 AS.volume = Mathf.Lerp (AS.volume,0,Time.deltaTime * 2);  
+                ScreenMatLerp = Mathf.Lerp(ScreenMatLerp, 0.075f, Time.deltaTime * 2.5f);
             }
 
             if (!WasColliding && !Collided)
@@ -53,6 +72,7 @@ public class Scr_MechCollisions : MonoBehaviour
                 Tilt.RotateTo += CollsionTilt;
                 Collided = true;
                 Anim.SetTrigger("BigShake");
+                ScreenMatLerp -= 1;
             }
 
             MechLook.SwivelSpeed = 25;
@@ -60,6 +80,7 @@ public class Scr_MechCollisions : MonoBehaviour
         else
         {
             AS.volume = Mathf.Lerp (AS.volume,0,Time.deltaTime * 2);
+            ScreenMatLerp = Mathf.Lerp(ScreenMatLerp, 0.075f, Time.deltaTime * 2.5f);
             Collided = false;
             MechLook.SwivelSpeed = 75;
         }
@@ -74,7 +95,7 @@ public class Scr_MechCollisions : MonoBehaviour
     void CheckCollision(Transform Pos, int index)
     {
         RaycastHit hit;
-        if (Physics.Raycast(Pos.position, Pos.forward, out hit, 2))
+        if (Physics.Raycast(Pos.position, Pos.forward, out hit, 2, GroundMask))
         {
             IsColliding = true;
             CollisionPos = hit.point;
