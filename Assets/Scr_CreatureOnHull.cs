@@ -67,7 +67,7 @@ public class Scr_CreatureOnHull : MonoBehaviour
         if (Collider.IsColliding && !WasColliding)
         {
             RaycastHit hit;
-            if(Physics.Raycast(transform.position - Vector3.down * 2,transform.forward,out hit,5) && !HasDied)
+            if(Physics.Raycast(transform.position - Vector3.down * 2,-transform.forward,out hit,5) && !HasDied)
             {
                 GameObject DeadCreature = Instantiate(DeadPrefab,hit.point, transform.rotation);
                 DeadCreature.transform.LookAt(transform);
