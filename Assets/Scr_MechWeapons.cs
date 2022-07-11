@@ -16,6 +16,7 @@ public class Scr_MechWeapons : MonoBehaviour
     [SerializeField] Transform GunTransform;
     [SerializeField] Scr_HudLightBlinker Blinker;
     [SerializeField] Scr_HudLight AmmoLight;
+    [SerializeField] Scr_Power Power;
 
     public int MaxAmmo;
     public int AmmoCount;
@@ -65,6 +66,7 @@ public class Scr_MechWeapons : MonoBehaviour
             ShotTimer = FireRate;
             AmmoCount--;
             Instantiate(BulletPrefab,ShootPos.position,ShootPos.rotation);
+            Power.Power -= 15;
         }
     }
 }

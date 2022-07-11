@@ -34,13 +34,26 @@ public class Scr_MechMovement : MonoBehaviour
     Vector3 CurrentMoveVec;
 
     [SerializeField] Scr_CockpitTilter Tilt;
+
+    [SerializeField] Scr_Power Power;
+    float PowerDrain;
+
     public void RecieveInput (Vector2 _horizontalInput)
     {
-        horizontalInput = _horizontalInput;
+        if (Power.HasPower)
+        {
+            horizontalInput = _horizontalInput;
+        }
+        else
+        {
+            horizontalInput = Vector2.zero;
+        }
     }
 
     private void Update() 
     { 
+        Power.Power -= PowerDrain * Time.deltaTime;;
+
         Tilt.RotateTo += new Vector3(horizontalInput.y,0,-horizontalInput.x).normalized * Time.deltaTime;
 
         IsGrounded = Physics.CheckSphere(MechAgent.position,0.5f,GroundMask);
@@ -70,39 +83,42 @@ public class Scr_MechMovement : MonoBehaviour
                 EngineVolume = Mathf.Lerp(EngineVolume, 0.5f, Time.deltaTime );
                 EnginePitch = Mathf.Lerp(EnginePitch, 1, Time.deltaTime);
                 IsMoving = true;
+                PowerDrain = Mathf.Lerp(PowerDrain,5,Time.deltaTime);
             }
             else
             {
                 EngineVolume = Mathf.Lerp(EngineVolume, 0.15f, Time.deltaTime);
                 EnginePitch = Mathf.Lerp(EnginePitch, 0.8f, Time.deltaTime);
                 IsMoving = false;
+                PowerDrain = Mathf.Lerp(PowerDrain,0,Time.deltaTime);
             }
-
             EngineAS.volume = EngineVolume;
             EngineAS.pitch = EnginePitch;
         }
-
-            verticalVelcoity.y += Gravity * Time.deltaTime;
-            controller.Move(verticalVelcoity * Time.deltaTime);
+        verticalVelcoity.y += Gravity * Time.deltaTime;
+        controller.Move(verticalVelcoity * Time.deltaTime);
     }
 
     public void Dash()
     {
-        Debug.Log("Dashing");
-        DashTimer = DashTime;
-        EngineAS.PlayOneShot(DashSound);
-        if (horizontalInput == Vector2.zero)
+        if (Power.HasPower)
         {
-            CurrentDashVec = MechAgent.forward;
-             Tilt.RotateTo += new Vector3(3,0,0);
+            Debug.Log("Dashing");
+            DashTimer = DashTime;
+            Power.Power -= 30;
+            EngineAS.PlayOneShot(DashSound);
+            if (horizontalInput == Vector2.zero)
+            {
+                CurrentDashVec = MechAgent.forward;
+                Tilt.RotateTo += new Vector3(3,0,0);
+            }
+            else
+            {
+                CurrentDashVec = CurrentMoveVec;
+                CurrentDashVec = CurrentDashVec.normalized;
+            }
+            Tilt.RotateTo += new Vector3(horizontalInput.y,0,-horizontalInput.x).normalized * 3;
         }
-        else
-        {
-            CurrentDashVec = CurrentMoveVec;
-            CurrentDashVec = CurrentDashVec.normalized;
-
-        }
-        Tilt.RotateTo += new Vector3(horizontalInput.y,0,-horizontalInput.x).normalized * 3;
     }
 
     public Vector2 GetHorizontalInput()

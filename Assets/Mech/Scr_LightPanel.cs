@@ -24,6 +24,9 @@ public class Scr_LightPanel : MonoBehaviour
     [SerializeField] Scr_HudLight LightsHud;
     [SerializeField] Scr_HudLight FloodLightsHud;
 
+    [SerializeField] Scr_Power Power;
+    float PowerDrain = 0;
+
 
     public void LightOff()
     {
@@ -39,7 +42,7 @@ public class Scr_LightPanel : MonoBehaviour
         OffLightsHud.IsOn = true;
         LightsHud.IsOn = false;
         FloodLightsHud.IsOn = false;
-        
+        PowerDrain = 0;
     }
 
     public void LightOn()
@@ -56,6 +59,7 @@ public class Scr_LightPanel : MonoBehaviour
         OffLightsHud.IsOn = false;
         LightsHud.IsOn = true;
         FloodLightsHud.IsOn = false;
+        PowerDrain = 3;
     }
 
     public void LightHigh()
@@ -72,5 +76,11 @@ public class Scr_LightPanel : MonoBehaviour
         OffLightsHud.IsOn = false;
         LightsHud.IsOn = false;
         FloodLightsHud.IsOn = true;
+        PowerDrain = 7;
+    }
+
+    void Update()
+    {
+        Power.Power -= Time.deltaTime * PowerDrain;
     }
 }

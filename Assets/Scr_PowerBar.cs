@@ -8,18 +8,16 @@ public class Scr_PowerBar : MonoBehaviour
     public float Energy;
 
     [SerializeField] Scr_HudLight[] Lights;
-
-    /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
-    /// </summary>
+    float BarLerp;
     void Update()
     {
+        BarLerp = Mathf.Lerp(BarLerp, Energy, Time.deltaTime * 10);
         foreach (var Light in Lights)
         {
             Light.IsOn = false;
         }
 
-        int length = Mathf.RoundToInt(Energy/10);
+        int length = Mathf.RoundToInt(BarLerp/10);
         for (int i = 0; i < length; i++)
         {
             Lights[i].IsOn = true;
