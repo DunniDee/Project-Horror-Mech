@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_Vision01
-  m_Shader: {fileID: -6465566751694194690, guid: 0f2712ad90fa2934cb8fd6a25e26f5f3, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 429ff98986cf0b849981102255049d03, type: 3}
   m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -125,10 +125,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_4ee247c587e24a4ca717e75a1aefcd4d: 2
+    - Vector1_66258d8e9e9b46188040796b53dc6c4f: 10
     - Vector1_6778bb3ba6b345c0a8cd839c5cea910b: 100
     - Vector1_8de7fb67ed0848abb9f66600c2b0f4a5: 0.075
     - Vector1_b3adb792d7494e2aa67191c1906701cb: 1300
     - Vector1_b3db7a84deab47b689d878e042ef6956: 50
+    - Vector1_dd512d8fd2654d86a1642b5d99e23b7b: 1000
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -189,7 +192,7 @@ Material:
     - _MetallicRemapMin: 0
     - _NormalMapSpace: 0
     - _NormalScale: 1
-    - _Opacity: 0.07499999
+    - _Opacity: 0.07499995
     - _OpaqueCullMode: 2
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
