@@ -7,6 +7,8 @@ public class Scr_HudLight : MonoBehaviour
     [SerializeField] Material OffMat; 
     [SerializeField] Material OnMat; 
 
+    public bool NoPower;
+
     MeshRenderer Mesh;
 
     public bool IsOn;
@@ -23,7 +25,8 @@ public class Scr_HudLight : MonoBehaviour
 
     protected void CheckLight()
     {
-                if (IsOn)
+        
+        if (IsOn && !NoPower)
         {
             Mesh.material = OnMat;
         }

@@ -51,8 +51,8 @@ public class Scr_MouseLook : MonoBehaviour
 
         if (IsLocked)
         {
-            LookRotation.x += MouseInput.x * Time.deltaTime * 0.1f;
-            LookRotation.y -= MouseInput.y * Time.deltaTime * 0.1f;
+            LookRotation.x += MouseInput.x * SensitivityX * Time.deltaTime * 0.1f;
+            LookRotation.y -= MouseInput.y * SensitivityY  * Time.deltaTime * 0.1f;
 
             LookRotation.x = Mathf.Clamp(LookRotation.x, -LookClamp.x,LookClamp.x);
             LookRotation.y = Mathf.Clamp(LookRotation.y, -LookClamp.y,LookClamp.y);
@@ -63,8 +63,8 @@ public class Scr_MouseLook : MonoBehaviour
         }
         else
         {
-            LookRotation.x += MouseInput.x * Time.deltaTime;
-            LookRotation.y -= MouseInput.y * Time.deltaTime;
+            LookRotation.x += MouseInput.x * SensitivityX * Time.deltaTime;
+            LookRotation.y -= MouseInput.y * SensitivityY * Time.deltaTime;
 
             LookRotation.x = Mathf.Clamp(LookRotation.x, -LookClamp.x,LookClamp.x);
             LookRotation.y = Mathf.Clamp(LookRotation.y, -LookClamp.y,LookClamp.y);
