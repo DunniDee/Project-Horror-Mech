@@ -2788,7 +2788,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 783586559}
         m_TargetAssemblyTypeName: Scr_Power, Assembly-CSharp
-        m_MethodName: PowerD
+        m_MethodName: PowerC
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7603,7 +7603,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 783586559}
         m_TargetAssemblyTypeName: Scr_Power, Assembly-CSharp
-        m_MethodName: PowerC
+        m_MethodName: PowerD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9881,7 +9881,7 @@ MonoBehaviour:
   OffLightsHud: {fileID: 1802135173}
   LightsHud: {fileID: 2093094208}
   FloodLightsHud: {fileID: 2113923558}
-  Power: {fileID: 0}
+  Power: {fileID: 783586559}
 --- !u!1 &2157357961626501360
 GameObject:
   m_ObjectHideFlags: 0
@@ -12767,7 +12767,7 @@ MonoBehaviour:
   GunTransform: {fileID: 1869544297101482169}
   Blinker: {fileID: 765096641}
   AmmoLight: {fileID: 2021828921}
-  Power: {fileID: 0}
+  Power: {fileID: 783586559}
   MaxAmmo: 6
   AmmoCount: 6
   FireRate: 1
@@ -12801,8 +12801,8 @@ MonoBehaviour:
   EmergencyBulb: {fileID: 1666836847}
   LightA: {fileID: 706897028}
   LightB: {fileID: 323761009}
-  LightC: {fileID: 1117460578}
-  LightD: {fileID: 1551786607}
+  LightC: {fileID: 1551786607}
+  LightD: {fileID: 1117460578}
 --- !u!1 &3744990168406171769
 GameObject:
   m_ObjectHideFlags: 0
