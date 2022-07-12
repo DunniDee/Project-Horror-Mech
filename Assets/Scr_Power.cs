@@ -192,6 +192,7 @@ public class Scr_Power : MonoBehaviour
         HasPower = true;
         PowerGenerating = true;
         HasDied = false;
+        CanRestart = false;
         if (Power<5)
         {
             Power=10;
@@ -210,6 +211,10 @@ public class Scr_Power : MonoBehaviour
             PowerSequenceA = true;
             LightA.IsOn = false;
         }
+        else
+        {
+            Debug.Log("ButtonA");   
+        }
     }
 
     public void PowerB()
@@ -219,6 +224,11 @@ public class Scr_Power : MonoBehaviour
             PowerSequenceB = true;
             LightB.IsOn = false;
         }
+        else
+        {
+            Debug.Log("ButtonB");   
+        }
+
     }
 
     public void PowerC()
@@ -228,6 +238,11 @@ public class Scr_Power : MonoBehaviour
             PowerSequenceC = true;
             LightC.IsOn = false;
         }
+        else
+        {
+            Debug.Log("ButtonC");   
+        }
+        
     }
 
     public void PowerD()
@@ -236,6 +251,10 @@ public class Scr_Power : MonoBehaviour
         { 
             PowerSequenceD = true;
             LightD.IsOn = false;
+        }
+        else
+        {
+            Debug.Log("ButtonD");   
         }
     }
 
