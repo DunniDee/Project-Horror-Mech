@@ -23,6 +23,10 @@ public class Scr_MechLook : MonoBehaviour
     Vector2 MechRotation;
 
     [SerializeField] Scr_Power Power;
+    [SerializeField] float PowerOnTime;
+    float PowerOnTimer;
+
+    bool WasPowered;
 
     // Start is called before the first frame update
     void Start()
@@ -67,8 +71,6 @@ public class Scr_MechLook : MonoBehaviour
             LookRotation.x += MouseInput.x * Time.deltaTime;
             LookRotation.y -= MouseInput.y * Time.deltaTime;
 
-
-
             LookRotation.y = Mathf.Clamp(LookRotation.y, -LookClamp.y,LookClamp.y);
         }
 
@@ -76,9 +78,20 @@ public class Scr_MechLook : MonoBehaviour
         {
             LookRotation.y = Mathf.Lerp(LookRotation.y, LookClamp.y, Time.deltaTime);
         }
+        if (PowerOnTimer > 0)
+        {
+            PowerOnTimer-=Time.deltaTime;
+            LookRotation.y = Mathf.Lerp(LookRotation.y, 0, Time.deltaTime);
+        }
+        if (Power.HasPower && !WasPowered)
+        {
+            PowerOnTimer = PowerOnTime;
+        }
 
         MechAgent.localRotation= Quaternion.Euler(0,LookRotation.x,0);
         LookCam.localRotation= Quaternion.Euler(LookRotation.y,0,0);
+
+        WasPowered = Power.HasPower;
     }
 
     public void RecieveInput(Vector2 _mouseInput, Vector2 mechRotation)

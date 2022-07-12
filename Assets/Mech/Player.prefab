@@ -12708,6 +12708,7 @@ MonoBehaviour:
   IsRotating: 0
   LookClamp: {x: 0, y: 45}
   Power: {fileID: 783586559}
+  PowerOnTime: 2
 --- !u!114 &1264552916
 MonoBehaviour:
   m_ObjectHideFlags: 0
