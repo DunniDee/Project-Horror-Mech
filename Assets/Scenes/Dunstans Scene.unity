@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4190
+  m_Name: pb_Mesh107650
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -293,7 +293,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23394
+  m_Name: pb_Mesh107806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -457,7 +457,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4944
+  m_Name: pb_Mesh110734
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -621,7 +621,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4178
+  m_Name: pb_Mesh107966
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -785,7 +785,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23356
+  m_Name: pb_Mesh107358
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1217,6 +1217,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 781051d1ea472b546add3aa110a239db, type: 3}
+--- !u!84 &335367508
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'BaseLight : Cookie Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 3
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 5
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &340522420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1284,7 +1320,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1918
+  m_Name: pb_Mesh108862
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1447,13 +1483,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7676196145983883820, guid: 781051d1ea472b546add3aa110a239db, type: 3}
   m_PrefabInstance: {fileID: 299763400}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &490202269
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'BaseLight : Cookie Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 3
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 5
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!43 &501152553
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1870
+  m_Name: pb_Mesh109770
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1617,7 +1689,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3946
+  m_Name: pb_Mesh106602
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1781,7 +1853,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1846
+  m_Name: pb_Mesh110806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11395,24 +11467,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &546583447 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 783586559, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
-  m_PrefabInstance: {fileID: 3744990167447764752}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21f294d6ef3b617479ced1d7425ef267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &586803331
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1882
+  m_Name: pb_Mesh109504
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11576,7 +11637,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3870
+  m_Name: pb_Mesh107826
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12114,7 +12175,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4912
+  m_Name: pb_Mesh110754
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12278,7 +12339,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3882
+  m_Name: pb_Mesh108714
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12828,24 +12889,13 @@ Transform:
   m_Father: {fileID: 362115383}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &827152666 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1117460578, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
-  m_PrefabInstance: {fileID: 3744990167447764752}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5909bb2caa27934dbb97d1980844a37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &875585334
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23418
+  m_Name: pb_Mesh108702
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13003,85 +13053,140 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!84 &893681981
-RenderTexture:
+--- !u!1 &952421613
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'BaseLight : Cookie Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 5
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
---- !u!84 &986486636
-RenderTexture:
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 952421615}
+  - component: {fileID: 952421614}
+  m_Layer: 0
+  m_Name: PowerSouds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &952421614
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'BaseLight : Cookie Map Render Texture'
-  m_ImageContentsHash:
+  m_GameObject: {fileID: 952421613}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 4
+  MaxDistance: 5
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 5
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
     serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &952421615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952421613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5, y: 0, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1214677851}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &994647468
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3834
+  m_Name: pb_Mesh108116
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13306,7 +13411,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1786
+  m_Name: pb_Mesh107320
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13838,13 +13943,18 @@ Transform:
   m_Father: {fileID: 362115383}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1214677851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1965783535, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+  m_PrefabInstance: {fileID: 3744990167447764752}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1327432076
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1798
+  m_Name: pb_Mesh106334
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14008,7 +14118,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3858
+  m_Name: pb_Mesh110106
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14172,7 +14282,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4962
+  m_Name: pb_Mesh110234
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14512,24 +14622,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1526596110 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1551786607, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
-  m_PrefabInstance: {fileID: 3744990167447764752}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5909bb2caa27934dbb97d1980844a37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &1599157249
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1810
+  m_Name: pb_Mesh109052
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14693,7 +14792,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23372
+  m_Name: pb_Mesh107574
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14862,7 +14961,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1774
+  m_Name: pb_Mesh108456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15069,7 +15168,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1894
+  m_Name: pb_Mesh107740
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15233,7 +15332,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4932
+  m_Name: pb_Mesh109082
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15397,7 +15496,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1834
+  m_Name: pb_Mesh108196
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15597,7 +15696,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3846
+  m_Name: pb_Mesh106516
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15761,7 +15860,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1822
+  m_Name: pb_Mesh106766
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15925,7 +16024,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1858
+  m_Name: pb_Mesh107050
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16089,7 +16188,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1906
+  m_Name: pb_Mesh110082
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16266,22 +16365,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1388040392}
-    - target: {fileID: 457412635, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
-      propertyPath: myEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PowerC
+    - target: {fileID: 783586559, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: AS
+      value: 
+      objectReference: {fileID: 952421614}
+    - target: {fileID: 783586559, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: PowerOnSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a35b0d3e970f1d49901226a62055701, type: 3}
+    - target: {fileID: 783586559, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: PowerOffSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb21af751ef7fd7458e66b754a540d0b, type: 3}
+    - target: {fileID: 1389680072, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: m_Volume
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 783586559, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
-      propertyPath: LightC
-      value: 
-      objectReference: {fileID: 1526596110}
-    - target: {fileID: 783586559, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
-      propertyPath: LightD
-      value: 
-      objectReference: {fileID: 827152666}
-    - target: {fileID: 884615547, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
-      propertyPath: Power
-      value: 
-      objectReference: {fileID: 546583447}
     - target: {fileID: 1403126508, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16306,14 +16405,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 161082963}
-    - target: {fileID: 1805500101, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
-      propertyPath: Power
-      value: 
-      objectReference: {fileID: 546583447}
-    - target: {fileID: 1971346735, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
-      propertyPath: myEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PowerD
-      objectReference: {fileID: 0}
     - target: {fileID: 96172311495288543, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16329,7 +16420,7 @@ PrefabInstance:
     - target: {fileID: 2851660720062375260, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: cookieMapRenderTexture
       value: 
-      objectReference: {fileID: 986486636}
+      objectReference: {fileID: 490202269}
     - target: {fileID: 3641519313032515231, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16433,6 +16524,10 @@ PrefabInstance:
     - target: {fileID: 3744990168365726965, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744990168365726968, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: PowerOnTime
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3744990168406171770, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: m_Mesh

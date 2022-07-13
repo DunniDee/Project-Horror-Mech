@@ -31,6 +31,10 @@ public class Scr_Power : MonoBehaviour
     [SerializeField] Scr_HudLight LightC;
     [SerializeField] Scr_HudLight LightD;
 
+    [SerializeField] AudioSource AS;
+    [SerializeField] AudioClip PowerOnSound;
+    [SerializeField] AudioClip PowerOffSound;
+
     float FlashTimer;
 
     // Start is called before the first frame update
@@ -124,6 +128,7 @@ public class Scr_Power : MonoBehaviour
             LightB.IsOn = true;
             LightC.IsOn = true;
             LightD.IsOn = true;
+            AS.PlayOneShot(PowerOnSound);
         }
         else
         {
@@ -133,6 +138,7 @@ public class Scr_Power : MonoBehaviour
             LightB.IsOn = true;
             LightC.IsOn = true;
             LightD.IsOn = true;
+            AS.PlayOneShot(PowerOffSound);
         }
     }
 
