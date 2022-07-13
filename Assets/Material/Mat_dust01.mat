@@ -22,8 +22,9 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_dust01
   m_Shader: {fileID: 4800000, guid: 15bfa105b49f2ae41ad7561733c67311, type: 3}
-  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _DISABLE_SSR_TRANSPARENT _NORMALMAP_TANGENT_SPACE
-    _USAGESTAGE_PIXEL _USAGETYPE_LIGHT
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _DISABLE_DECALS _DISABLE_SSR_TRANSPARENT
+    _EMISSIVE_COLOR_MAP _ENABLE_FOG_ON_TRANSPARENT _NORMALMAP_TANGENT_SPACE _SURFACE_TYPE_TRANSPARENT
+    _TWOSIDEDILLUMINATION_ON _USAGESTAGE_PIXEL _USAGETYPE_LIGHT
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -165,7 +166,7 @@ Material:
     - _CameraFadingEnabled: 0
     - _CameraFarFadeDistance: 2
     - _CameraNearFadeDistance: 1
-    - _ClipValue: 0.5
+    - _ClipValue: 0.65
     - _CoatMask: 0
     - _ColorMode: 0
     - _Cull: 2
