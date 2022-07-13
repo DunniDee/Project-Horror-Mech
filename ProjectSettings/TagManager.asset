@@ -14,7 +14,7 @@ TagManager:
   - Water
   - UI
   - Creature
-  - NotRadarLight
+  - NotViewedInRadar
   - PostProcessing
   - Not in Reflection
   - 
