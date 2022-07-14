@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Button
   - Shell
+  - Creature
   layers:
   - Default
   - TransparentFX
