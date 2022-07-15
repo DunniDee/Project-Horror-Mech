@@ -6,6 +6,7 @@ public class Scr_ProximityScanner : MonoBehaviour
 {
     [SerializeField] Scr_HudLightBlinker[] Lights;
     [SerializeField] Transform[] ScannerPos;
+    [SerializeField] LayerMask CreatureMask;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class Scr_ProximityScanner : MonoBehaviour
     void CheckScanner(Transform Pos, int BlinkIndex)
     {
         RaycastHit hit;
-        if (Physics.Raycast(Pos.position, Pos.forward, out hit, 10))
+        if (Physics.Raycast(Pos.position, Pos.forward, out hit, 10, CreatureMask))
         {
             Lights[BlinkIndex].IsBlinking = true;
             Lights[BlinkIndex].BlinkTime = hit.distance * 0.1f;
