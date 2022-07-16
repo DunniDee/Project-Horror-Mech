@@ -35,6 +35,8 @@ public class Scr_Power : MonoBehaviour
     [SerializeField] AudioClip PowerOnSound;
     [SerializeField] AudioClip PowerOffSound;
 
+    [SerializeField] Scr_CockpitTilter Tilt;
+
     float FlashTimer;
 
     // Start is called before the first frame update
@@ -88,6 +90,7 @@ public class Scr_Power : MonoBehaviour
         else
         {
             ScreenMatLerp = Mathf.Lerp(ScreenMatLerp, 0,Time.deltaTime);
+            Tilt.RotateTo += Vector3.right * 45 * Time.deltaTime * 0.25f;
             PilotLight.intensity = Mathf.Lerp(PilotLight.intensity, 0, Time.deltaTime);
             if (EmergencySystemDelayTimer > 0)
             {

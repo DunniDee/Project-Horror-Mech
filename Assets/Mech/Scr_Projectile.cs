@@ -30,4 +30,11 @@ public class Scr_Projectile : MonoBehaviour
             // expl.transform.LookAt(Hit.normal);
         }
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Creature"))
+        {
+            other.GetComponent<Scr_SeekerCreature>().Die();
+        }
+    }
 }

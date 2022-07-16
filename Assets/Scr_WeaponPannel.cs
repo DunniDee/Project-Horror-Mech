@@ -15,6 +15,10 @@ public class Scr_WeaponPannel : MonoBehaviour
     [SerializeField] Scr_HudLight ReloadLight;
     [SerializeField] Scr_HudLight AmmoLight;
 
+    [SerializeField] float FlapTime;
+    [SerializeField] Transform FlapTransform;
+    float FlapTimer;
+
     private void Update() 
     {
         if (Weapons.AmmoCount < Weapons.MaxAmmo)
@@ -27,6 +31,16 @@ public class Scr_WeaponPannel : MonoBehaviour
             ReloadLight.IsOn = false;
             AmmoLight.IsOn = false;
         }
+
+        if (FlapTimer > 0)
+        {
+            FlapTimer-= Time.deltaTime;
+            FlapTransform.rotation  = Quaternion.Lerp(FlapTransform.rotation, Quaternion.Euler(0,-9.72f, 90), Time.deltaTime * 4);
+        }
+        else
+        {
+            FlapTransform.rotation  = Quaternion.Lerp(FlapTransform.rotation, Quaternion.Euler(0,-9.72f, 0), Time.deltaTime * 4);
+        }
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -35,6 +49,7 @@ public class Scr_WeaponPannel : MonoBehaviour
         {
             if (!other.GetComponent<Scr_AmmoShell>().ToDestroy)
             {
+                FlapTimer = FlapTime;
                 Scr_AmmoShell temp = other.GetComponent<Scr_AmmoShell>();
                 Debug.Log("LoadedShell");
                 Look.Shell = null;

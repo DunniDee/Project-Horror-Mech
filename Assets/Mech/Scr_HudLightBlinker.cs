@@ -18,22 +18,25 @@ public class Scr_HudLightBlinker : Scr_HudLight
     {
         CheckLight();
 
-        if (IsBlinking)
+        if (!NoPower)
         {
-            if (Timer >= 0)
+            if (IsBlinking)
             {
-                Timer-=Time.deltaTime;
+                if (Timer >= 0)
+                {
+                    Timer-=Time.deltaTime;
+                }
+                else
+                {
+                    Timer = BlinkTime;
+                    IsOn = !IsOn;
+                    AS.PlayOneShot(BlinkSound,volume);
+                }
             }
             else
             {
-                Timer = BlinkTime;
-                IsOn = !IsOn;
-                AS.PlayOneShot(BlinkSound,volume);
+                IsOn = false;
             }
-        }
-        else
-        {
-            IsOn = false;
         }
     }
 }

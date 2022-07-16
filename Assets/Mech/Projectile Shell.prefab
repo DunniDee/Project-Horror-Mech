@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2759298886911763296}
   - component: {fileID: 4525668947059732418}
   - component: {fileID: 2904724994023387857}
+  - component: {fileID: 2033614626984919965}
   m_Layer: 0
   m_Name: Projectile Shell
   m_TagString: Untagged
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb16900a6bac6f34890d3685b8e96d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 250
+  Speed: 200
   AS: {fileID: 2904724994023387857}
   ImpactSound: {fileID: 8300000, guid: d92741a1f9e1c854a81e0a8a51853534, type: 3}
   HasHit: 0
@@ -147,6 +148,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &2033614626984919965
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2759298886911763299}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2871249611007615530
 GameObject:
   m_ObjectHideFlags: 0
