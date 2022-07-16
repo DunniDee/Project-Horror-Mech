@@ -752,13 +752,13 @@ MonoBehaviour:
     min: 0
   baseHeight:
     m_OverrideState: 1
-    m_Value: -7.7
+    m_Value: -30
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 80
+    m_Value: 110
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 12
+    m_Value: 30
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
