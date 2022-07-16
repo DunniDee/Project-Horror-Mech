@@ -2110,13 +2110,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665073877}
-  m_LocalRotation: {x: 0.19249173, y: 0.3020331, z: -0.0250469, w: 0.93332505}
+  m_LocalRotation: {x: 0.30203313, y: -0.19249173, z: 0.93332505, w: 0.02504698}
   m_LocalPosition: {x: 64.5, y: 115.49988, z: -1.3999999}
   m_LocalScale: {x: 37.50001, y: 40, z: 5}
   m_Children: []
   m_Father: {fileID: 3779181763177556498}
   m_RootOrder: 91
-  m_LocalEulerAnglesHint: {x: 21.99, y: 36.7, z: 4.3}
+  m_LocalEulerAnglesHint: {x: 21.99, y: 36.7, z: 184.3}
 --- !u!33 &665073881
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5968,7 +5968,7 @@ MonoBehaviour:
   IsBlinking: 0
   AS: {fileID: 2021654236}
   BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
-  volume: 1
+  volume: 0.25
 --- !u!1 &919132148902733670
 GameObject:
   m_ObjectHideFlags: 0
@@ -6335,7 +6335,7 @@ MonoBehaviour:
   IsBlinking: 0
   AS: {fileID: 2021654236}
   BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
-  volume: 1
+  volume: 0.25
 --- !u!1 &1612264574996975122
 GameObject:
   m_ObjectHideFlags: 0
@@ -6554,7 +6554,7 @@ MonoBehaviour:
   IsBlinking: 0
   AS: {fileID: 2021654236}
   BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
-  volume: 1
+  volume: 0.25
 --- !u!1 &2022132407338514455
 GameObject:
   m_ObjectHideFlags: 0
@@ -6691,7 +6691,7 @@ MonoBehaviour:
   IsBlinking: 0
   AS: {fileID: 2021654236}
   BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
-  volume: 1
+  volume: 0.25
 --- !u!1 &2455917244024569738
 GameObject:
   m_ObjectHideFlags: 0
@@ -7350,7 +7350,7 @@ MonoBehaviour:
   IsBlinking: 0
   AS: {fileID: 2021654236}
   BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
-  volume: 1
+  volume: 0.25
 --- !u!1 &3744990167231152493
 GameObject:
   m_ObjectHideFlags: 0
@@ -10088,8 +10088,8 @@ MonoBehaviour:
   BlinkTime: 0
   IsBlinking: 0
   AS: {fileID: 2021654236}
-  BlinkSound: {fileID: 8300000, guid: 9be894fdbb9a43e4e8c8211937a631dd, type: 3}
-  volume: 1
+  BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+  volume: 0.25
 --- !u!65 &998438029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10659,7 +10659,7 @@ MonoBehaviour:
   IsBlinking: 0
   AS: {fileID: 2021654236}
   BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
-  volume: 1
+  volume: 0.25
 --- !u!1 &8451228934902933974
 GameObject:
   m_ObjectHideFlags: 0
@@ -11049,7 +11049,7 @@ MonoBehaviour:
   IsBlinking: 0
   AS: {fileID: 2021654236}
   BlinkSound: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
-  volume: 1
+  volume: 0.25
 --- !u!1 &9028949150418974038
 GameObject:
   m_ObjectHideFlags: 0
