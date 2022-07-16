@@ -10,31 +10,55 @@ public class Scr_MechIntegrity : MonoBehaviour
     [SerializeField] AudioClip AboveClip;
     [SerializeField] AudioClip BelowClip;
     [SerializeField] AudioClip BehindClip;
+    [SerializeField] AudioClip VentBreak;
+
+
+    [SerializeField] Transform TopVent;
+    [SerializeField] Transform BackVent;
 
     [SerializeField] Animator Anim;
+
+    bool IsDead;
+    bool IsTop;
+    
+
+
+    [SerializeField] Scr_MouseLook Look;
     // Update is called once per frame
 
     private void Start() 
     {
-        GetShrilled();
+        Invoke("GetShrilled", 5);
     }
 
     void AttackAbove()
     {
         Anim.SetTrigger("Above");
         Invoke("PlayUp", 0.025f);
+        Look.LookTarget = new Vector2(0,-25);
+        Look.LockLerpSpeed = 1;
+        AboveSound.PlayOneShot(VentBreak);
+        IsTop = true;
+
     }
 
     void AttackBelow()
     {
         Anim.SetTrigger("Below");
         Invoke("PlayDown", 0.25f);
+        Look.LookTarget = new Vector2(-65,50);
+        Look.LockLerpSpeed = 0.5f;
+        BelowSound.PlayOneShot(VentBreak);
     }
 
     void AttackBehind()
     {
         Anim.SetTrigger("Behind");
         Invoke("PlayBack", 0.2f);
+        Look.LookTarget = new Vector2(145,15);
+        Look.LockLerpSpeed = 0.75f;
+        BehindSound.PlayOneShot(VentBreak);
+        IsTop = false;
     }
 
     void PlayUp()
@@ -52,7 +76,9 @@ public class Scr_MechIntegrity : MonoBehaviour
 
     void GetShrilled()
     {
-       switch (Mathf.RoundToInt(Random.Range(1,4.45f)))
+        IsDead = true;
+        Look.IsDead = true;
+       switch (Mathf.RoundToInt(Random.Range(0.51f,3.49f)))
        {
         case 1 :
             AttackAbove();
@@ -69,5 +95,20 @@ public class Scr_MechIntegrity : MonoBehaviour
         default:
         break;
        }
+    }
+
+    private void Update() 
+    {
+        if (IsDead)
+        {
+            if (IsTop)
+            {
+                TopVent.localPosition = Vector3.Lerp(TopVent.localPosition,new Vector3(0,100,0), Time.deltaTime * 2);
+            }
+            else
+            {
+                BackVent.localPosition = Vector3.Lerp(BackVent.localPosition,new Vector3(0,0,-100), Time.deltaTime * 2);
+            }
+        }
     }
 }
