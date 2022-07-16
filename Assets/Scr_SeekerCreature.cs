@@ -87,8 +87,8 @@ public class Scr_SeekerCreature : MonoBehaviour
         }
         else
         {
-            RB.AddTorque(-RB.angularVelocity * 0.1f);
-            RB.AddForce(Vector3.down * Time.deltaTime * 500,ForceMode.Acceleration);
+            RB.AddTorque(-RB.angularVelocity * 0.5f * Time.deltaTime);
+            RB.AddForce(Vector3.down * Time.deltaTime * 1000,ForceMode.Acceleration);
         }
     }
 
@@ -100,5 +100,19 @@ public class Scr_SeekerCreature : MonoBehaviour
         DB.enabled = true;
         RB.AddTorque(new Vector3(Random.Range(-1,1),Random.Range(-1,1),Random.Range(-1,1)) * Random.Range(25,50),ForceMode.VelocityChange);
         Col.material = PM;
+    }
+
+    private void OnCollisionEnter(Collision other) 
+    {
+        if (other.transform.CompareTag("Player"))
+        {
+            Debug.Log("Touching Player");
+            if (!other.transform.parent.gameObject.GetComponentInChildren<Scr_CreatureOnHull>().IsMounted)
+            {
+                other.transform.parent.gameObject.GetComponentInChildren<Scr_CreatureOnHull>().IsMounted = true;
+                Destroy(gameObject);
+            }
+        }
+        
     }
 }
