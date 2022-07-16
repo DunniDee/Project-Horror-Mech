@@ -87,8 +87,8 @@ public class Scr_SeekerCreature : MonoBehaviour
         }
         else
         {
-            RB.AddTorque(-RB.angularVelocity * 0.1f);
-            RB.AddForce(Vector3.down * Time.deltaTime * 500,ForceMode.Acceleration);
+            RB.AddTorque(-RB.angularVelocity * 0.5f * Time.deltaTime);
+            RB.AddForce(Vector3.down * Time.deltaTime * 1000,ForceMode.Acceleration);
         }
     }
 
