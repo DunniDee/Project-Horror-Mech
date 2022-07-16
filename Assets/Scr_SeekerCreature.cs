@@ -101,4 +101,18 @@ public class Scr_SeekerCreature : MonoBehaviour
         RB.AddTorque(new Vector3(Random.Range(-1,1),Random.Range(-1,1),Random.Range(-1,1)) * Random.Range(25,50),ForceMode.VelocityChange);
         Col.material = PM;
     }
+
+    private void OnCollisionEnter(Collision other) 
+    {
+        if (other.transform.CompareTag("Player"))
+        {
+            Debug.Log("Touching Player");
+            if (!other.transform.parent.gameObject.GetComponentInChildren<Scr_CreatureOnHull>().IsMounted)
+            {
+                other.transform.parent.gameObject.GetComponentInChildren<Scr_CreatureOnHull>().IsMounted = true;
+                Destroy(gameObject);
+            }
+        }
+        
+    }
 }
