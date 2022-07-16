@@ -14350,63 +14350,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &3318965388289433972
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1588682826353619102, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_Name
-      value: Dead Creature
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 106.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588682826353619103, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
 --- !u!1001 &3744990167447764752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14426,10 +14369,34 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1410515515}
+    - target: {fileID: 44268034447402607, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 44268034447402607, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: BlinkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
     - target: {fileID: 96172311495288543, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1545570220}
+    - target: {fileID: 1166612580011657703, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166612580011657703, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: BlinkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+    - target: {fileID: 2832432474713766036, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832432474713766036, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: BlinkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
     - target: {fileID: 3744990167244502057, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: frustumSettings.qualitySettings
       value: 
@@ -14498,10 +14465,50 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 877168262}
+    - target: {fileID: 3969213898467949036, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969213898467949036, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: BlinkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
     - target: {fileID: 4383467562439685830, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1545570220}
+    - target: {fileID: 5945743155729283491, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945743155729283491, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: BlinkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+    - target: {fileID: 6597474881769834135, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597474881769834135, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: BlinkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+    - target: {fileID: 6642709145905509938, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6642709145905509938, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: BlinkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
+    - target: {fileID: 7109395549522264687, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109395549522264687, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: BlinkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ffeaab51c5f2e44b9c5bebdf6a400c0, type: 3}
     - target: {fileID: 8350930257281696519, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: m_Mesh
       value: 
