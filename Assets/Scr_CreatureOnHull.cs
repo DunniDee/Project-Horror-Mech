@@ -14,6 +14,10 @@ public class Scr_CreatureOnHull : MonoBehaviour
     [SerializeField] AudioClip DeathSound;
 
     [SerializeField] Scr_CockpitTilter Tilt;
+    [SerializeField] Scr_MechIntegrity Integrity;
+
+
+    
 
 
 
@@ -29,6 +33,7 @@ public class Scr_CreatureOnHull : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Integrity.CreatureIsOnHull = IsMounted;
         if (IsMounted)
         {
             HasDied = false;
@@ -52,7 +57,7 @@ public class Scr_CreatureOnHull : MonoBehaviour
             else
             {
                 MoveTime = Random.Range(1,5);
-                StayTime = Random.Range(1,5);
+                StayTime = Random.Range(5,10);
                 SpinSpeed = Random.Range(-90,90);
                 CreatureSounds.volume = Mathf.Lerp(CreatureSounds.volume,0, Time.deltaTime);
             }   

@@ -22,8 +22,11 @@ public class Scr_MouseLook : MonoBehaviour
     [SerializeField] Camera LookCam;
     [SerializeField] Transform CamSwivel;
     [SerializeField] Scr_MechWeapons Weapons;
+    public Vector2 LookTarget;
+    public float LockLerpSpeed = 5;
 
     public bool IsLocked;
+    public bool IsDead;
 
     Vector2 MouseInput;
     [SerializeField] Vector2 LookClamp;
@@ -49,7 +52,7 @@ public class Scr_MouseLook : MonoBehaviour
     {    
         CheckButton();
 
-        if (IsLocked)
+        if (IsDead)
         {
             LookRotation.x += MouseInput.x * SensitivityX * Time.deltaTime * 0.1f;
             LookRotation.y -= MouseInput.y * SensitivityY  * Time.deltaTime * 0.1f;
@@ -57,27 +60,42 @@ public class Scr_MouseLook : MonoBehaviour
             LookRotation.x = Mathf.Clamp(LookRotation.x, -LookClamp.x,LookClamp.x);
             LookRotation.y = Mathf.Clamp(LookRotation.y, -LookClamp.y,LookClamp.y);
 
-            CurrentFof = Mathf.Lerp(CurrentFof, LockFOV, Time.deltaTime * 5);
+            LookRotation.x = Mathf.Lerp(LookRotation.x, LookTarget.x, Time.deltaTime * LockLerpSpeed);
+            LookRotation.y = Mathf.Lerp(LookRotation.y, LookTarget.y, Time.deltaTime * LockLerpSpeed);
+
+            CurrentFof = Mathf.Lerp(CurrentFof, DefaultFOV, Time.deltaTime * 5);
 
             Crosshair.color = Color.Lerp(Crosshair.color, new Color(0,0,0,0), Time.deltaTime  * 5);
         }
         else
         {
-            LookRotation.x += MouseInput.x * SensitivityX * Time.deltaTime;
-            LookRotation.y -= MouseInput.y * SensitivityY * Time.deltaTime;
+            if (IsLocked)
+            {
+                LookRotation.x += MouseInput.x * SensitivityX * Time.deltaTime * 0.1f;
+                LookRotation.y -= MouseInput.y * SensitivityY  * Time.deltaTime * 0.1f;
 
-            LookRotation.x = Mathf.Clamp(LookRotation.x, -LookClamp.x,LookClamp.x);
-            LookRotation.y = Mathf.Clamp(LookRotation.y, -LookClamp.y,LookClamp.y);
+                LookRotation.x = Mathf.Clamp(LookRotation.x, -LookClamp.x,LookClamp.x);
+                LookRotation.y = Mathf.Clamp(LookRotation.y, -LookClamp.y,LookClamp.y);
 
-            CurrentFof = Mathf.Lerp(CurrentFof, DefaultFOV, Time.deltaTime * 5);
+                LookRotation.x = Mathf.Lerp(LookRotation.x, 0, Time.deltaTime * 5);
+                LookRotation.y = Mathf.Lerp(LookRotation.y, 0, Time.deltaTime * 5);
 
-            Crosshair.color = Color.Lerp(Crosshair.color, CurrentCrosshairColor, Time.deltaTime  * 5);
-        }
+                CurrentFof = Mathf.Lerp(CurrentFof, LockFOV, Time.deltaTime * 5);
 
-        if (IsLocked)
-        {
-            LookRotation.x = Mathf.Lerp(LookRotation.x, 0, Time.deltaTime * 5);
-            LookRotation.y = Mathf.Lerp(LookRotation.y, 0, Time.deltaTime * 5);
+                Crosshair.color = Color.Lerp(Crosshair.color, new Color(0,0,0,0), Time.deltaTime  * 5);
+            }
+            else
+            {
+                LookRotation.x += MouseInput.x * SensitivityX * Time.deltaTime;
+                LookRotation.y -= MouseInput.y * SensitivityY * Time.deltaTime;
+
+                LookRotation.x = Mathf.Clamp(LookRotation.x, -LookClamp.x,LookClamp.x);
+                LookRotation.y = Mathf.Clamp(LookRotation.y, -LookClamp.y,LookClamp.y);
+
+                CurrentFof = Mathf.Lerp(CurrentFof, DefaultFOV, Time.deltaTime * 5);
+
+                Crosshair.color = Color.Lerp(Crosshair.color, CurrentCrosshairColor, Time.deltaTime  * 5);
+            }
         }
 
         LookCam.fieldOfView = CurrentFof;

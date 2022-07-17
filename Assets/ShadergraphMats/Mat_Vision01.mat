@@ -168,7 +168,7 @@ Material:
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
     - _EmissiveIntensityUnit: 0
-    - _Emmisive: 1300
+    - _Emmisive: 1299.9993
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
@@ -193,7 +193,7 @@ Material:
     - _MetallicRemapMin: 0
     - _NormalMapSpace: 0
     - _NormalScale: 1
-    - _Opacity: 0.07499283
+    - _Opacity: 0.074999966
     - _OpaqueCullMode: 2
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
