@@ -77,6 +77,9 @@ public class Scr_MouseLook : MonoBehaviour
                 LookRotation.x = Mathf.Clamp(LookRotation.x, -LookClamp.x,LookClamp.x);
                 LookRotation.y = Mathf.Clamp(LookRotation.y, -LookClamp.y,LookClamp.y);
 
+                LookRotation.x = Mathf.Lerp(LookRotation.x, 0, Time.deltaTime * 5);
+                LookRotation.y = Mathf.Lerp(LookRotation.y, 0, Time.deltaTime * 5);
+
                 CurrentFof = Mathf.Lerp(CurrentFof, LockFOV, Time.deltaTime * 5);
 
                 Crosshair.color = Color.Lerp(Crosshair.color, new Color(0,0,0,0), Time.deltaTime  * 5);

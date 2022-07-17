@@ -14,6 +14,10 @@ public class Scr_CreatureOnHull : MonoBehaviour
     [SerializeField] AudioClip DeathSound;
 
     [SerializeField] Scr_CockpitTilter Tilt;
+    [SerializeField] Scr_MechIntegrity Integrity;
+
+
+    
 
 
 
@@ -29,6 +33,7 @@ public class Scr_CreatureOnHull : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Integrity.CreatureIsOnHull = IsMounted;
         if (IsMounted)
         {
             HasDied = false;
@@ -67,7 +72,7 @@ public class Scr_CreatureOnHull : MonoBehaviour
         if (Collider.IsColliding && !WasColliding)
         {
             RaycastHit hit;
-            if(Physics.Raycast(transform.position - Vector3.down * 2,-transform.forward,out hit,5) && !HasDied)
+            if(Physics.Raycast(transform.position - Vector3.down * 2,transform.forward,out hit,5) && !HasDied)
             {
                 GameObject DeadCreature = Instantiate(DeadPrefab,hit.point, transform.rotation);
                 DeadCreature.transform.LookAt(transform);

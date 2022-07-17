@@ -1000,7 +1000,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5952659ab3e85e841beb26b170544954, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1925,6 +1925,7 @@ MonoBehaviour:
   DeadPrefab: {fileID: 1588682826353619102, guid: 382c08acbd8fc424480c24b04fe51e71, type: 3}
   DeathSound: {fileID: 8300000, guid: cabc8d9df5d4d0846aa2ccca83c8b2cf, type: 3}
   Tilt: {fileID: 488299383}
+  Integrity: {fileID: 688562540009035285}
   IsMounted: 0
   HasDied: 0
   WasColliding: 0
@@ -4547,7 +4548,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.120353535, b: 0, a: 1}
-  m_Intensity: 7.957747
+  m_Intensity: 11.936621
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4650,7 +4651,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 100
+  m_Intensity: 150
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -8327,6 +8328,8 @@ MonoBehaviour:
   TopVent: {fileID: 3459069535753336022}
   BackVent: {fileID: 7559429887901521122}
   Anim: {fileID: 8187717435043156185}
+  CreatureIsOnHull: 0
+  SecondsTillShrill: 10
   Look: {fileID: 3744990168365726967}
 --- !u!1 &3744990168435765786
 GameObject:
