@@ -8,6 +8,7 @@ public class Scr_BlastDoor : MonoBehaviour
     [SerializeField] Transform RightDoor;
     [SerializeField] float DoorSpeed;
     [SerializeField] AudioSource AS;
+    [SerializeField] 
     
 
 
@@ -44,5 +45,22 @@ public class Scr_BlastDoor : MonoBehaviour
             LeftDoor.localPosition = Vector3.Lerp(Vector3.zero, new Vector3(-15,0,0),DoorLerp);
             RightDoor.localPosition = Vector3.Lerp(Vector3.zero, new Vector3(15,0,0),DoorLerp);
         }
+    }
+
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.transform.name == "Mech_Agent")
+        {
+            IsOpening = true;
+        }    
+    }
+
+    private void OnTriggerExit(Collider other) 
+    {
+        Debug.Log(other.transform.name);
+        if (other.transform.name == "Mech_Agent")
+        {
+            IsOpening = false;
+        }        
     }
 }
