@@ -15,6 +15,10 @@ public class Scr_MechIntegrity : MonoBehaviour
 
     [SerializeField] Transform TopVent;
     [SerializeField] Transform BackVent;
+    [SerializeField] Rigidbody TopVentBreak;
+    [SerializeField] Rigidbody BackVentBreak;
+
+    bool BreakVent = false;
 
     [SerializeField] Animator Anim;
 
@@ -39,7 +43,8 @@ public class Scr_MechIntegrity : MonoBehaviour
         Anim.SetTrigger("Above");
         Invoke("PlayUp", 0.025f);
         Look.LookTarget = new Vector2(0,-25);
-        Look.LockLerpSpeed = 1;
+        // Look.LockLerpSpeed = 1;
+        Look.LockLerpSpeed = 5;
         AboveSound.PlayOneShot(VentBreak);
         IsTop = true;
 
@@ -50,7 +55,8 @@ public class Scr_MechIntegrity : MonoBehaviour
         Anim.SetTrigger("Below");
         Invoke("PlayDown", 0.25f);
         Look.LookTarget = new Vector2(-65,50);
-        Look.LockLerpSpeed = 0.5f;
+        // Look.LockLerpSpeed = 0.5f;
+        Look.LockLerpSpeed = 5;
         BelowSound.PlayOneShot(VentBreak);
     }
 
@@ -59,7 +65,8 @@ public class Scr_MechIntegrity : MonoBehaviour
         Anim.SetTrigger("Behind");
         Invoke("PlayBack", 0.2f);
         Look.LookTarget = new Vector2(145,15);
-        Look.LockLerpSpeed = 0.75f;
+        // Look.LockLerpSpeed = 0.75f;
+        Look.LockLerpSpeed = 5;
         BehindSound.PlayOneShot(VentBreak);
         IsTop = false;
     }
@@ -67,14 +74,17 @@ public class Scr_MechIntegrity : MonoBehaviour
     void PlayUp()
     {
         AboveSound.PlayOneShot(AboveClip);
+        BreakVent = true;
     }
     void PlayDown()
     {
         BelowSound.PlayOneShot(BelowClip);
+        BreakVent = true;
     }
     void PlayBack()
     {
         BehindSound.PlayOneShot(BehindClip);
+        BreakVent = true;
     }
 
     public void GetShrilled()
@@ -106,11 +116,25 @@ public class Scr_MechIntegrity : MonoBehaviour
         {
             if (IsTop)
             {
-                TopVent.localPosition = Vector3.Lerp(TopVent.localPosition,new Vector3(0,100,0), Time.deltaTime * 2);
+                TopVent.localPosition = Vector3.Lerp(TopVent.localPosition,new Vector3(0,1000,0), Time.deltaTime * 2);
             }
             else
             {
-                BackVent.localPosition = Vector3.Lerp(BackVent.localPosition,new Vector3(0,0,-100), Time.deltaTime * 2);
+                BackVent.localPosition = Vector3.Lerp(BackVent.localPosition,new Vector3(0,0,-1000), Time.deltaTime * 2);
+            }
+        }
+
+        if (BreakVent)
+        {
+            if (IsTop)
+            {
+                TopVentBreak.isKinematic = false;
+                TopVentBreak.AddForce(new Vector3(0,-1,0), ForceMode.VelocityChange);
+            }
+            else
+            {
+                BackVentBreak.isKinematic = false;
+                BackVentBreak.AddForce(new Vector3(0,0,1), ForceMode.VelocityChange);
             }
         }
 

@@ -26,8 +26,9 @@ public class Scr_Projectile : MonoBehaviour
             Destroy(gameObject,1);
             AS.PlayOneShot(ImpactSound);
             HasHit = true;
-            // GameObject expl = Instantiate(ExplosionPrefab,Hit.point, Quaternion.identity);
-            // expl.transform.LookAt(Hit.normal);
+            
+            GameObject expl = Instantiate(ExplosionPrefab,Hit.point, Quaternion.identity);
+            expl.transform.LookAt(Hit.normal);
         }
     }
 
