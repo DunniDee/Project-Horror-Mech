@@ -151,7 +151,7 @@ MonoBehaviour:
   RB: {fileID: 8294354117422952030}
   DB: {fileID: 1189871459}
   LookTowards: {fileID: 7424863795787790588}
-  Speed: 7.5
+  Speed: 10
   SpeedDampening: 0.85
   Anim: {fileID: 8294354117750380150}
   AnimTime: 2

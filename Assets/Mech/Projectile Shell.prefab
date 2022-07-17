@@ -51,7 +51,7 @@ MonoBehaviour:
   AS: {fileID: 2904724994023387857}
   ImpactSound: {fileID: 8300000, guid: d92741a1f9e1c854a81e0a8a51853534, type: 3}
   HasHit: 0
-  ExplosionPrefab: {fileID: 1865186388202176779}
+  ExplosionPrefab: {fileID: 1900142323722153564, guid: 8c1834eaa0623b642b1833ccc86fc6ce, type: 3}
 --- !u!82 &2904724994023387857
 AudioSource:
   m_ObjectHideFlags: 0
@@ -801,11 +801,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7d2d32911cc65043be3f0fc866ff3ce, type: 3}
---- !u!1 &1865186388202176779 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8531714118543892972, guid: a7d2d32911cc65043be3f0fc866ff3ce, type: 3}
-  m_PrefabInstance: {fileID: 8035765248182001895}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1865186388202176822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8531714118543892945, guid: a7d2d32911cc65043be3f0fc866ff3ce, type: 3}
