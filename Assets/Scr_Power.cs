@@ -84,7 +84,7 @@ public class Scr_Power : MonoBehaviour
         if (HasPower)
         {
             ScreenMatLerp = Mathf.Lerp(ScreenMatLerp, 1300,Time.deltaTime * 2);
-            PilotLight.intensity = Mathf.Lerp(PilotLight.intensity, 100, Time.deltaTime);
+            PilotLight.intensity = Mathf.Lerp(PilotLight.intensity, 200, Time.deltaTime);
             EmergencyBulb.NoPower = true;
         }
         else
@@ -99,7 +99,7 @@ public class Scr_Power : MonoBehaviour
             else
             {
                 EmergencyLight.enabled = true;
-                EmergencyLight.intensity = Mathf.Lerp(EmergencyLight.intensity, 25, Time.deltaTime * 0.5f);
+                EmergencyLight.intensity = Mathf.Lerp(EmergencyLight.intensity, 100, Time.deltaTime * 0.5f);
                 CanRestart = true;
                 LightA.NoPower = false;
                 LightB.NoPower = false;

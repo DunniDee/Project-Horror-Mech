@@ -20,7 +20,10 @@ public class Scr_MechIntegrity : MonoBehaviour
 
     bool IsDead;
     bool IsTop;
+
+    public bool CreatureIsOnHull;
     
+     [SerializeField] float SecondsTillShrill;
 
 
     [SerializeField] Scr_MouseLook Look;
@@ -28,7 +31,7 @@ public class Scr_MechIntegrity : MonoBehaviour
 
     private void Start() 
     {
-        Invoke("GetShrilled", 5);
+        //Invoke("GetShrilled", 5);
     }
 
     void AttackAbove()
@@ -74,7 +77,7 @@ public class Scr_MechIntegrity : MonoBehaviour
         BehindSound.PlayOneShot(BehindClip);
     }
 
-    void GetShrilled()
+    public void GetShrilled()
     {
         IsDead = true;
         Look.IsDead = true;
@@ -108,6 +111,15 @@ public class Scr_MechIntegrity : MonoBehaviour
             else
             {
                 BackVent.localPosition = Vector3.Lerp(BackVent.localPosition,new Vector3(0,0,-100), Time.deltaTime * 2);
+            }
+        }
+
+        if (CreatureIsOnHull)
+        {
+            SecondsTillShrill -= Time.deltaTime;
+            if (!IsDead && SecondsTillShrill < 0)
+            {
+                GetShrilled();
             }
         }
     }
