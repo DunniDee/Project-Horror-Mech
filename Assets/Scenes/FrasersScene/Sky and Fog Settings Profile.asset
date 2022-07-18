@@ -83,10 +83,10 @@ MonoBehaviour:
     m_Value: 0
   limitMin:
     m_OverrideState: 1
-    m_Value: 7
+    m_Value: 6
   limitMax:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 7
   curveMap:
     m_OverrideState: 1
     m_Value:
@@ -624,7 +624,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 3.5
+    m_Value: 4
     min: 0
     max: 4
   directLightingStrength:
@@ -634,7 +634,7 @@ MonoBehaviour:
     max: 1
   radius:
     m_OverrideState: 1
-    m_Value: 4.79
+    m_Value: 0.4
     min: 0.25
     max: 5
   spatialBilateralAggressiveness:
@@ -758,7 +758,7 @@ MonoBehaviour:
     m_Value: 110
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 30
+    m_Value: 40
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
