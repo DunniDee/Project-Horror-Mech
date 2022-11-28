@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41530794, g: 0.4113171, b: 0.48562664, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2645,7 +2645,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-71164
+  m_Name: pb_Mesh-33636
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3651,6 +3651,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 884615547, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: CurrentLight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3744990167244502057, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: frustumSettings.qualitySettings
       value: 
@@ -3714,6 +3718,10 @@ PrefabInstance:
     - target: {fileID: 3744990168365726965, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744990168365726967, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
+      propertyPath: IsLocked
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3744990168632822590, guid: 6a0ed7f4888eb014a9aa46e9c99812d6, type: 3}
       propertyPath: frustumSettings.qualitySettings

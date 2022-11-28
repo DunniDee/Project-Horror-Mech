@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 946217d352747b849acaf992d7a45f2b
+  - enabled: 1
     path: Assets/Scenes/Dunstans Scene.unity
     guid: df36f293afc99734e92481e20ac32706
   m_configObjects: {}
